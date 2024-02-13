@@ -1,0 +1,107 @@
+/* 	__________ ____ ___  ___________________.___  _________ ___ ___  
+	\______   \    |   \/  _____/\_   _____/|   |/   _____//   |   \ 
+	 |    |  _/    |   /   \  ___ |    __)  |   |\_____  \/    ~    \
+	 |    |   \    |  /\    \_\  \|     \   |   |/        \    Y    /
+	 |______  /______/  \______  /\___  /   |___/_______  /\___|_  / 
+			\/                 \/     \/                \/       \/  	
+						www.bugfish.eu
+						
+	Bugfish Fast PHP Page Framework
+	Copyright (C) 2024 Jan Maurice Dahlmanns [Bugfish]
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+.multiselect_sortable_hide{
+    position : absolute;
+    top      : -9999999px;
+}
+.multiselect_sortable_content{
+    float : left;
+    width : 100%;
+}
+.multiselect_sortable_content_selection{
+    float  : left;
+    width  : calc(50% - 20px);
+    margin : 10px;
+}
+.multiselect_sortable_content_selection .selection_title{
+    float         : left;
+    width         : 100%;
+    margin-bottom : 10px;
+}
+.multiselect_sortable_content_selection .selection_content{
+    float         : left;
+    width         : 100%;
+    height        : 300px;
+    border        : 2px solid #000;
+    border-radius : 5px;
+    overflow-y    : scroll;
+    overflow-x    : hidden;
+    margin        : 0;
+    padding       : 0;
+    box-sizing    : border-box;
+}
+.multiselect_sortable_content_selection .selection_content li{
+    float         : left;
+    width         : 100%;
+    padding       : 10px;
+    border-bottom : 1px solid #eeeeee;
+    list-style    : none;
+    box-sizing    : border-box;
+    cursor        : pointer;
+}
+.multiselect_sortable_content_selection .selection_content li.disabled{
+    opacity     : 0.5;
+    background  : #000000;
+    cursor      : no-drop;
+    user-select : none;
+}
+.multiselect_sortable_content_selectable{
+    float  : left;
+    width  : calc(50% - 20px);
+    margin : 10px;
+}
+.multiselect_sortable_content_selectable .selectable_title{
+    float         : left;
+    width         : 100%;
+    margin-bottom : 10px;
+}
+.multiselect_sortable_content_selectable .selectable_content{
+    float         : left;
+    width         : 100%;
+    height        : 300px;
+    border        : 2px solid #000;
+    border-radius : 5px;
+    overflow-y    : scroll;
+    overflow-x    : hidden;
+    margin        : 0;
+    padding       : 0;
+    box-sizing    : border-box;
+}
+.multiselect_sortable_content_selectable .selectable_content li{
+    float         : left;
+    width         : 100%;
+    padding       : 10px;
+    border-bottom : 1px solid #eeeeee;
+    list-style    : none;
+    box-sizing    : border-box;
+    cursor        : pointer;
+}
+.multiselect_sortable_content_selectable .selectable_content li.disabled{
+    opacity     : 0.5;
+    background  : #000000;
+    cursor      : no-drop;
+    user-select : none;
+}

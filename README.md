@@ -17,9 +17,7 @@ You can manage Books with informations to them and show them on a public page wh
 ![Bugfish Framework](./_images/logo.jpg)
 
 ## Documentation
-Look inside folders for readme and license informations! Documentations can be found in the docs folder. Just execute the index.html file in your webbrowser. (example: via drag and drop). The Book Rental Management System is a web application designed for managing a library's book rental operations, user and permission management, ISBN API connections, and multi-language support. This system allows you to efficiently rent books to users, set return deadlines, manage user permissions, and automate the process of adding books to the library database.
-
-You can find the documentation at www.bugfish.eu, besides  that there is a documentation inside the docs folder of this repository and at https://bugfishtm.github.io/Online-Book-Renting !  
+Look inside folders for readme and license informations! Documentations can be found in the docs folder. Just execute the index.html file in your webbrowser. (example: via drag and drop). The Book Rental Management System is a web application designed for managing a library's book rental operations, user and permission management, ISBN API connections, and multi-language support. This system allows you to efficiently rent books to users, set return deadlines, manage user permissions, and automate the process of adding books to the library database. You can find the documentation at www.bugfish.eu, besides  that there is a documentation inside the docs folder of this repository and at https://bugfishtm.github.io/Online-Book-Renting !  
 
 You can find the Documentation here:  
 https://bugfishtm.github.io/Online-Book-Renting/
@@ -70,6 +68,4 @@ In this project there has been used different 3rd party libraries (for example j
 
 ## License
 
-For licensing information, please refer to the `license.md` file inside this repository's folder. Raum8 is designed to be both user-friendly and secure, ensuring that your image-sharing experience is enjoyable and protected.
-
-Thank you for choosing Raum8, and we hope you have a great time exploring and sharing images with the world!
+For licensing information, please refer to the `license.md` file inside this repository's folder.
