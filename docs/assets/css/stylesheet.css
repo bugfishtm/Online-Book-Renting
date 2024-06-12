@@ -156,8 +156,7 @@ h1, h2, h3 {
 	
 	.alert-danger, .callout-block-danger {
 	
-		background: red !important;
-		color: white !important;
+		background: #d26d69 !important;
 	}
 	
 	.alert-warning, .callout-block-warning {
@@ -232,7 +231,7 @@ h1, h2, h3 {
 		background: #121212;
 	}
 	.json.hljs {
-		background: #242424;
+		background: #242424 !important;
 	}
 	
 	@media (max-width: 800px) {
@@ -241,4 +240,22 @@ h1, h2, h3 {
 			background: #242424 !important;
 		}
 		
+	}
+	
+
+	.autohide_hover {
+		cursor:pointer;
+		background: #242424;
+	}
+	.autohide_hover h3 {
+		cursor:pointer;
+		color: white !important;
+	}
+	.autohide_hover:hover {
+		background: #121212;
+		color: white !important;
+	}
+	.autohide_hover:hover h3 {
+		background: #121212;
+		color: white !important;
 	}

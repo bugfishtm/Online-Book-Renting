@@ -1,4 +1,4 @@
-# LICENSE
+# TEMPLATE LICENSE
 
 This GitHub page template was originally designed with dedication and care by Xiaoying Riley for developers. It has been further enhanced and modified by Bugfish for specific purposes. To ensure a fair and respectful use of this template, please adhere to the following terms and conditions.
 

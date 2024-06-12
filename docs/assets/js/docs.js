@@ -94,6 +94,17 @@ var spy = new Gumshoe('#docs-nav a', {
 var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
 
 
+$(document).ready(function(){
+  $(".autohide_hover").click(function(){
+	$(this).next().children().toggle();
+  });
+});
+//$(".autohide").toggle();
+function showNext(thisbutton) {
+	if(thisbutton.text() == "Show Content") { thisbutton.html("Hide Content"); }
+	else { thisbutton.html("Show Content"); }
+	thisbutton.next().toggle();
+}
 
 
 

@@ -1,20 +1,21 @@
 ![Bugfish](https://img.shields.io/badge/Bugfish-Software-orange)
 ![Status](https://img.shields.io/badge/Status-Finished-green)
 ![License](https://img.shields.io/badge/License-GPLv3-black)
-![Version](https://img.shields.io/badge/Version-1.00-white)
-![Version](https://img.shields.io/badge/Build-100-white)
+![Version](https://img.shields.io/badge/Version-1.10.100-white)
 
-This project has been created with the "Bugfish Framework" and "Fast-PHP-Page" CMS.
+This project has been created with the "Bugfish Framework" and "Bugfish" CMS.
 
 Documentation Bugfish Framework:  
 https://www.bugfish-github.de/bugfish-framework  
-Documentation Fast-PHP-Page:  
-https://www.bugfish-github.de/fast-php-page    
+Documentation bugfishCMS:  
+https://www.bugfish-github.de/bugfish-cms    
 
 # Online-Book-Renting (obr)
 You can manage Books with informations to them and show them on a public page where people can see these books and maybe register to rent them or donate books. 
 
 ![Bugfish Framework](./_images/logo.jpg)
+
+**This project is a module for the bugfish cms to always have the documentation for this template in hand! You can download this module out of your bugfishcms store if you are using the _administrator module!**
 
 ## Documentation
 Look inside folders for readme and license informations! Documentations can be found in the docs folder. Just execute the index.html file in your webbrowser. (example: via drag and drop). The Book Rental Management System is a web application designed for managing a library's book rental operations, user and permission management, ISBN API connections, and multi-language support. This system allows you to efficiently rent books to users, set return deadlines, manage user permissions, and automate the process of adding books to the library database. You can find the documentation at www.bugfish.eu, besides  that there is a documentation inside the docs folder of this repository and at https://bugfishtm.github.io/Online-Book-Renting !  
@@ -51,8 +52,9 @@ To install and set up the Book Rental Management System, please refer to the doc
 - _source: Source code to deploy the web application.
 - docs: Comprehensive website documentation.
 - _releases: Releases of the software.
-- _images: Images for the readme
-- _preview: Preview Screenshots of the software
+- _images: Images for the readme and about the project
+- _changelog: Versioning Changelogs
+- _licenses: licenses of 3rd Party Libraries included in this project
 
 ## Reporting Issues
 If you encounter issues or have questions while using this software, please don't hesitate to contact us on our forum at www.bugfish.eu/forum.
@@ -61,10 +63,10 @@ If you encounter issues or have questions while using this software, please don'
 As this project has been made with a backend cms, most of the files are CMS - Related and belong not spefically to this project. This project has been delivered as a site module named "obr". You can find the Code in the websites "_site" folder!
 
 ## 3rd Party Libraries
-In this project there has been used different 3rd party libraries (for example jQuery). All external Libraries are included in the websites /_vendor folder, as theire licenses. The project itself is made with the help of the "Bugfish Framework" and the "Fast PHP Page" Backend CMS.
+In this project there has been used different 3rd party libraries (for example jQuery). All external Libraries are included in the websites /_vendor folder, as theire licenses. The project itself is made with the help of the "Bugfish Framework" and the "Bugfish" Backend CMS.
 
 ![Bugfish Framework](./_images/bugfish-framework-banner.jpg) 
-![Bugfish FP² Banner](./_images/bugfish-fp2-banner.jpg)
+![Bugfish FP² Banner](./_images/bugfish-cms-banner.jpg)
 
 ## License
 
