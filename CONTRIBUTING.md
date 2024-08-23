@@ -1,6 +1,6 @@
 # Contributing
 
-Follow these guidelines if you'd like to contribute to the project!
+Follow these guidelines if you'd like to contribute to this project!
 
 ---
 
