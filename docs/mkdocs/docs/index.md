@@ -1,8 +1,9 @@
 # Online Book Renting (OBR)
 
+## Introduction
+
 Welcome to the Online Book Renting (OBR) Web Software documentation. OBR is a comprehensive platform for managing and renting books online. The software provides a seamless experience for both administrators and users, offering various features to manage books, rentals, users, and more.
 
-## General Information
 
 OBR is your premier destination for book rentals online. With an extensive catalog of literary treasures, OBR caters to every reader's taste. Our sophisticated web software offers a seamless browsing experience, making it easy to discover your next literary adventure. Join the OBR community today and explore a world of boundless literary exploration.
 
@@ -41,17 +42,15 @@ OBR is your premier destination for book rentals online. With an extensive catal
 - Add new language files and set default language in the interface.
 - Support for per-user language settings.
 
-## Requirements
+## Developers
+If you are a developer, you can get insights about used libraries and the content management system on which this product runs on in the following section.
 
-- Webserver with Apache2
-- Apache2 modules: `rewrite`, `ssl`
-- MySQL database access (remote or local)
-- PHP 8 with `curl`, `mysqli`, and `mbstring` modules
-- Recommended: 1GB webspace
+### Bugfish Framework
+You can find documentation about the Bugfish Framework at the following url:  
 
-## Default Login for Web Interface
+[Documentation](https://bugfishtm.github.io/bugfish-framework){.md-button}
 
-> **Important:** Change the initial password after your first login.
+### Bugfish CMS
+You can find documentation about the Bugfish CMS at the following url:  
 
-- **Username:** admin
-- **Password:** changeme
+[Documentation](https://bugfishtm.github.io/bugfish-cms){.md-button}

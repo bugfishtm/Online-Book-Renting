@@ -53,6 +53,13 @@ Additional documentation:
 
 For installation and setup instructions, refer to the `docs` folder. The documentation provides a step-by-step guide for installation.
 
+## Docker
+
+There may be a Docker image available for this project on my Docker Hub account:
+[Docker Hub - bugfishtm](https://hub.docker.com/u/bugfishtm)
+
+Please check the page to see if a suitable image for this project has been published. If available, it will provide a convenient way to get started with a pre-configured environment.
+
 ## Repository Structure
 
 | **Folder** | **Description** |
@@ -62,7 +69,7 @@ For installation and setup instructions, refer to the `docs` folder. The documen
 | `docs` | Comprehensive documentation for the project. |
 | `_releases` | Software releases. |
 | `_images` | Images for README and project information. |
-| `_changelog` | Versioning changelogs. |
+| `_changelogs` | Versioning changelogs. |
 | `_licenses` | Licenses for 3rd party libraries included in the project. |
 
 ## Project Code Location
