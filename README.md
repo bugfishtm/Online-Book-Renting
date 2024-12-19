@@ -1,26 +1,22 @@
-# Online-Book-Renting (obr)
+# Online-Book-Renting (OBR)
 
 The Online-Book-Renting (obr) system allows you to manage books, display them on a public page, and enable users to rent or donate books.
 
-## Documentation
+**Relevant Repository Folders for this Project:**
 
-To access documentation:
+|File/Folder|Description|
+|-----|-----|
+|_changelogs| Versioned Changelogs of this product.|
+|_images| Images for this readme file you are currently looking at and about the project itself. |
+|_licenses| Licenses of included 3rd Party Libraries.|
+|_releases| Versioned Releases of this product. |
+|_source| Containts the product, upload content of this folder to your webservers public html directory. |
+|docs| Execute index.html in your browser to get access to the full documentation.|
+|CONTRIBUTING.md| Project contributing rules.|
+|LICENSE.md| License of this project|
+|README.md| Readme you are currently looking at.|
 
-| **Source** | **Description** |
-|------------|-----------------|
-| **In Repository** | Look inside the `docs` folder for README and license information. Open `index.html` in a web browser (e.g., drag and drop). |
-| **Online Documentation** | [Online-Book-Renting Documentation](https://bugfishtm.github.io/Online-Book-Renting/) |
-
-Additional documentation:
-
-| **Resource** | **Description** | **Link** |
-|--------------|-----------------|----------|
-| BugfishCMS | Documentation for the OBR Platform | [BugfishCMS Documentation](https://bugfishtm.github.io/bugfish-cms/) |
-| Bugfish Framework | Documentation for the Bugfish Framework | [Bugfish Framework Documentation](https://bugfishtm.github.io/bugfish-framework/) |
-
-## Features
-
-### Book Rental Management
+## Book Rental Management
 
 | **Feature** | **Description** |
 |-------------|-----------------|
@@ -28,7 +24,7 @@ Additional documentation:
 | **Deadline Tracking** | Monitor if users exceed return deadlines and manage necessary actions. |
 | **Additional Information** | Add notes and user deposits for book security. |
 
-### User and Permission Management
+## User and Permission Management
 
 | **Role** | **Permissions** |
 |----------|-----------------|
@@ -36,50 +32,73 @@ Additional documentation:
 | **Default Users** | Request and donate books, view available books. |
 | **Guests** | View the entire collection of books without logging in. |
 
-### ISBN API Connections
+## ISBN API Connections
 
 | **Feature** | **Description** |
 |-------------|-----------------|
 | **ISBN API** | Enable API connections to automatically retrieve and pre-fill book details. |
 
-### Multi-Language Support
+## Documentation
 
-| **Feature** | **Description** |
-|-------------|-----------------|
-| **Language Files** | Add new language files and adjust default language settings. |
-| **User Preferences** | Allow users to select their preferred language. |
+You can also find the documentation in this repositories "docs" folder. Just execute the index.html file in your browser and you will have access to the documentation and all included information.
+
+Documentation: https://bugfishtm.github.io/Online-Book-Renting/
 
 ## Installation
 
-For installation and setup instructions, refer to the `docs` folder. The documentation provides a step-by-step guide for installation.
+To get information about the installation process on your server, visit our documentation which is linked in the "Documentation" section of this readme. You can also view our documentation directly with your brower, which you can find in the "docs" folder of this repository
 
-## Docker
+Installation Instructions: https://bugfishtm.github.io/Online-Book-Renting/installation.html
 
-There may be a Docker image available for this project on my Docker Hub account:
-[Docker Hub - bugfishtm](https://hub.docker.com/u/bugfishtm)
+## Multi-Language Support
 
-Please check the page to see if a suitable image for this project has been published. If available, it will provide a convenient way to get started with a pre-configured environment.
+This project supports multiple language, you can add languages by your own or change text on the website by overriding translations. 
 
-## Repository Structure
+![Language Flag](./_images/de.png) 
+![Language Flag](./_images/en.png) 
+![Language Flag](./_images/es.png) 
+![Language Flag](./_images/it.png) 
+![Language Flag](./_images/fr.png) 
+![Language Flag](./_images/ja.png) 
+![Language Flag](./_images/zh.png) 
 
-| **Folder** | **Description** |
-|------------|-----------------|
-| `.github` | Contains sponsorship-related files. |
-| `_source` | Source code for deploying the web application. |
-| `docs` | Comprehensive documentation for the project. |
-| `_releases` | Software releases. |
-| `_images` | Images for README and project information. |
-| `_changelogs` | Versioning changelogs. |
-| `_licenses` | Licenses for 3rd party libraries included in the project. |
+## How to get Support?
 
-## Project Code Location
+Should you encounter any issues or have questions while using this software, please do not hesitate to reach out to us.
+- [Bugfish Forum](www.bugfish.eu/forum)
+- [Mail Support](mailto:request@bugfish.eu)
+- [Github Issues](https://github.com/bugfishtm/Online-Book-Renting/issues)
 
-The project is delivered as a site module named "obr" within a CMS. The code can be found in the `_site` folder of the website.
+## Information for Developers
 
-## 3rd Party Libraries
+As this project is based on Suitefish CMS, you should take a look at the official CMS Documentation if you plan to develop your own modules or modify existing modules.
 
-Various 3rd party libraries (e.g., jQuery) are used in this project. All external libraries and their licenses are located in the `/_core/_vendor` folder. The project utilizes the Bugfish Framework and Bugfish Backend CMS. See this repositories _licenses folder to view included licenses of libraries.
+Product Documentation:    
+https://bugfishtm.github.io/Online-Book-Renting/
 
-## License
+CMS Documentation:    
+https://bugfishtm.github.io/suitefish-cms/
 
-For licensing information, please refer to the `license.md` file located in this repository.
+Framework Documentation:  
+https://bugfishtm.github.io/bugfish-framework/
+
+
+## Powered by Suitefish
+
+This project has been created with SuitefishCMS and is available to you for free. The Backend consists of a various set of Suitefish functionalities and the full included Bugfish-Framework.
+
+![Bugfish Framework](./_images/suitefish-banner.jpg)
+
+![Bugfish Framework](./_images/bugfish-framework-banner.jpg)
+
+
+## Licensing Information
+
+### CMS System
+The Suitefish CMS is listed as GPLv3 Licensed project. Please see license.md file for more information about this projects license.
+
+### 3rd Party Libraries
+
+View _licenses folder to see which 3rd party scripts have been used and which external templates and functionalities have been implemented. Take care to respect every single license.
+
+🐟 Bugfish <3

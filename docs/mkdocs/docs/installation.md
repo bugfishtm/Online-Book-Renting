@@ -4,7 +4,7 @@
 
 Before you begin the installation, ensure you have the following:
 
-- Apache2 webserver recommended. (To check compatibility with nginx check the main platforms documentation site of [bugfishCMS](https://bugfishtm.github.io/bugfish-cms).)
+- Apache2 webserver recommended.
 - Apache2 modules: `rewrite`, `ssl`.
 - Access to a MySQL database (remote or local).
 - PHP 8 installed with `curl`, `mysqli`, and `mbstring` modules. Website will ask you for other required modules if necessary and not installed.
