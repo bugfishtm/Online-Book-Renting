@@ -141,12 +141,11 @@
 			/*-----------------------------------------*/
 			/* Eventbox Admin Template Stylesheet */
 			/*-----------------------------------------*/
-
 			/******************************************************* x_class_eventbox  *********/
 			.x_class_eventbox {
 				position: fixed;
 				top: 0px;
-				right: 15px;
+				right: 20px;
 				z-index: 1000 !important;
 			}
 
@@ -155,31 +154,35 @@
 			}
 			.x_class_eventbox_msg {
 				max-width: 500px;
+				border-radius: 5px;
 				padding: 15px;
 				margin-top: 20px;
-				border-radius: 15px;
 			}
 			.x_class_eventbox_msg_ok {
-				background: #2B982B;
-				color: white;
+				background: #D3DFF5;
+				color: #1579CA;
+				border: 1px solid #BDD0F0;
 			}
 			.x_class_eventbox_msg_error {
-				background: #FB483A;
-				color: white;
+				background: #F9D2DA;
+				color: #87112B;
+				border: 1px solid #F6BBC8;
 			}
 			.x_class_eventbox_msg_warning {
-				background: #FF9600;
+				background: #D3DFF5;
+				color: #1579CA;
+				border: 1px solid #BDD0F0;
 			}
 			.x_class_eventbox_msg_info {
-				background: #00B0E4;
-				color: white;
+				background: #D3DFF5;
+				color: #1579CA;
+				border: 1px solid #BDD0F0;
 			}
 			.x_class_eventbox_msg_close {
-				background: #121212;
-				border-radius: 15px;
+				background: #1F2937;
+				border-radius: 5px;
 				padding: 5px;
 				color: white;
-				text-align: center;
 				cursor: pointer;
 				width: 80px;
 				font-weight: bold;
@@ -187,15 +190,14 @@
 				position: absolute;
 				float: right;
 				right: 15px;
+				border: 0px solid black;
+				text-align: center;
 			}
-
 			.x_class_eventbox_msg_close:hover {
-				background: white;
-				color: #121212;
+				background: #E5E7EB;
+				color: black;
+				border: 0px solid black;
 			}
-
-			.x_class_eventbox_msg_text { }
-
 		</style>
             <div class="container mb-5 mt-5">
                 <div class="row justify-content-center form-bg-image" > <!-- data-background-lg="../../assets/img/illustrations/signin.svg"-->
@@ -214,7 +216,7 @@
                                         <span class="input-group-text" id="basic-addon1">
                                             <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                                         </span>
-                                        <input type="text" name="usermail" class="form-control" value="<?php echo htmlentities(@$_POST["usermail"] ?? ''); ?>" placeholder="<?php echo $object["lang"]->translate("string_email"); ?>" id="email" autofocus required>
+                                        <input type="text" name="usermail" class="form-control" value="<?php echo htmlentities(@$_POST["usermail"] ?? ''); ?>" placeholder="<?php echo hive__hen($object["lang"]->translate("string_email")); ?>" id="email" autofocus required>
                                     </div>  
                                 </div>
                                 <!-- End of Form -->
@@ -226,7 +228,7 @@
                                             <span class="input-group-text" id="basic-addon2">
                                                 <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
                                             </span>
-                                            <input type="password" placeholder="<?php echo $object["lang"]->translate("string_password"); ?>" class="form-control" id="password" name="password" required>
+                                            <input type="password" placeholder="<?php echo hive__hen($object["lang"]->translate("string_password")); ?>" class="form-control" id="password" name="password" required>
                                         </div>  
                                     </div>
                                     <!-- End of Form -->

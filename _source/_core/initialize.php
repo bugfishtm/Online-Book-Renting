@@ -646,9 +646,9 @@
 	#################################################################################################################################################
 	// Load Modules Current Selected MySQL Configuration
 	#################################################################################################################################################
+		$object["hive_mode_config"] = hive__init_site_header($object, _HIVE_MODE_); 
 		$object["loadup"]["mysql"] = array();		
 		if(!defined("_HIVE_CRIT_ER_")) { 
-			$object["hive_mode_config"] = hive__init_site_header($object, _HIVE_MODE_); 
 			foreach (glob($object["path"]."/_site/"._HIVE_MODE_."/_mysql/mysql.*.php") as $filename){ 
 				if(@basename($filename) == "index.php") { continue; } 
 				if(!$object["mysql"]->table_exists(_HIVE_SITE_PREFIX_.substr(basename($filename), 6, -4))) {
@@ -670,7 +670,7 @@
 						array_push($object["loadup"]["mysql"], $filenamemm);
 					} else { array_push($object["loadup"]["mysql"], $filename); }
 				}	
-			} unset($object["extension"]); unset($object["hive_mode_config"]);
+			}
 		} unset($object["log_tmp"]); 
 				
 	#################################################################################################################################################
@@ -992,21 +992,22 @@
 		if(is_array($object["extensions_path"])) {
 			foreach($object["extensions_path"] as $k => $v) {
 				if(file_exists($v."/version.php")) { 
+					$vpath = $v;
 					$v = basename($v);
 					$object["hive_mode_config_pre"]["extension_lang"][$v] = false;
 					// Include Relative Extension Language Files
 					if(defined("_HIVE_LANG_")) {
-						if(file_exists($v."/_lang/"._HIVE_LANG_.".php")) { 
-							$object["hive_mode_config_pre"]["extension_lang"][$v] = new x_class_lang(false, false, false, false, $v."/_lang/"._HIVE_LANG_.".php");  
-						} elseif(file_exists($v."/_lang/en.php")) { 
-							$object["hive_mode_config_pre"]["extension_lang"][$v] = new x_class_lang(false, false, false, false, $v."/_lang/en.php");  
+						if(file_exists($vpath."/_lang/"._HIVE_LANG_.".php")) { 
+							$object["hive_mode_config_pre"]["extension_lang"][$v] = new x_class_lang(false, false, false, false, $vpath."/_lang/"._HIVE_LANG_.".php");  
+						} elseif(file_exists($vpath."/_lang/en.php")) { 
+							$object["hive_mode_config_pre"]["extension_lang"][$v] = new x_class_lang(false, false, false, false, $vpath."/_lang/en.php");  
 						} else { $object["hive_mode_config_pre"]["extension_lang"][$v] 		= false; }
 					}
 					$tmp = false;
 					if(@is_object($object["hive_mode_config_pre"]["extension_lang"][$v])) { 
 						$tmp = new x_class_lang($object["mysql"], _TABLE_LANG_, @$_SESSION[_HIVE_SITE_COOKIE_."hive_language"], _HIVE_MODE_, false);		
 						foreach($tmp->array as $key => $value) { 
-							$nametoget = "___ext_".basename($v)."_";
+							$nametoget = "___ext_".$v."_";
 							$nametogetcounter = strlen($nametoget);
 							if(substr($key, 0, $nametogetcounter) == $nametoget) { $object["hive_mode_config_pre"]["extension_lang"][$v]->array[substr($key, $nametogetcounter)] = $value; } 
 						}

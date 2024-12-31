@@ -119,3 +119,70 @@ hive_login_msg_recfr_ok=Controlla la tua casella di posta elettronica per ottene
 hive_login_msg_pwtexpire=Questo Token per il Recupero della Password è scaduto! Riprova a recuperare il tuo account.
 hive_login_msg_recexecerror=Errore durante il tentativo di recuperare la password. Prova di nuovo a recuperare il tuo account.
 hive_login_msg_recexecok=Hai recuperato con successo la tua password e ora puoi accedere con la tua nuova password.
+
+##########################################################################################
+## Setupable Constant Explanations
+##########################################################################################
+
+hive_var_exp_1=Tema: Colore predefinito per colori del tema dinamico
+hive_var_exp_2=Tema: Array serializzato con temi validi
+hive_var_exp_3=Tema: Tema predefinito utilizzato
+hive_var_exp_4=Lingua: Array serializzato con lingue valide
+hive_var_exp_5=Lingua: Array con lingua predefinita
+hive_var_exp_6=Azioni: Modulo di registrazione generale attivo? (1=attivo/0=disattivo)
+hive_var_exp_7=Nessuna spiegazione disponibile.
+hive_var_exp_8=Azioni: Modulo di recupero generale attivo? (1=attivo/0=disattivo)
+hive_var_exp_9=Azioni: Modulo di attivazione generale attivo? (1=attivo/0=disattivo)
+hive_var_exp_10=Modulo di login generale attivo? (1=attivo/0=disattivo)
+hive_var_exp_11=TinyMCE: Stringa di configurazione dei plugin
+hive_var_exp_12=TinyMCE: Stringa di configurazione della barra del menu
+hive_var_exp_13=TinyMCE: Stringa di configurazione della barra degli strumenti
+hive_var_exp_14=Configurazione utente: Massimo giorni di validità delle sessioni/cookie
+hive_var_exp_15=Configurazione utente: Tempo in minuti di validità dei token delle email di attivazione
+hive_var_exp_16=Configurazione utente: Blocca utenti dopo X tentativi di login falliti (può essere 0 per disabilitare)
+hive_var_exp_17=Configurazione utente: Tempo in minuti che un utente deve aspettare tra le richieste (antiflood)
+hive_var_exp_18=Configurazione utente: Registrare vecchie sessioni? (Login, Recuperi, Attivazioni, Cambi email) (1=attivo/0=disattivo)
+hive_var_exp_19=Configurazione utente: Registrare gli indirizzi IP degli utenti nel database (1=attivo/0=disattivo)
+hive_var_exp_20=Configurazione utente: 1 - Rimuovere le chiavi di recupero dopo il login riuscito | 0 - Conservare le chiavi
+hive_var_exp_21=Configurazione utente: 1 - Consentire multi-login | 0 - Disabilitare multi-login
+hive_var_exp_22=Filtro password: Minimo segni
+hive_var_exp_23=Filtro password: Minimo segni maiuscoli
+hive_var_exp_24=Filtro password: Minimo segni minuscoli
+hive_var_exp_25=Filtro password: Minimo segni speciali
+hive_var_exp_26=Filtro password: Minimo segni numerici
+hive_var_exp_27=Nome utente creato inizialmente
+hive_var_exp_28=Password utente creata inizialmente
+hive_var_exp_29=Captcha: Altezza immagine
+hive_var_exp_30=Captcha: Larghezza immagine
+hive_var_exp_31=Captcha: Colori per il Captcha (opzionale, può essere 0)
+hive_var_exp_32=Captcha: Font (Se 0 verrà utilizzato il font predefinito)
+hive_var_exp_33=Redis: Attivato? (1/0)
+hive_var_exp_34=Redis: Host
+hive_var_exp_35=Redis: Porta
+hive_var_exp_36=Aggiornamenti: Titolo per l'aggiornamento su questo sito
+hive_var_exp_37=Aggiornamenti: Codice richiesto per l'aggiornamento? (può essere 0 per disabilitare)
+hive_var_exp_38=Impostazioni: Registrare richieste della classe CURL? (1/0)
+hive_var_exp_39=Impostazioni: Bloccare IP dopo X errori (può essere 0 per disabilitare)
+hive_var_exp_40=Impostazioni: Registrare i referer? (1/0)
+hive_var_exp_41=Impostazioni: Tempo predefinito di validità del codice CSRF in secondi
+hive_var_exp_42=Impostazioni: 1 - Consentire esecuzione cronjob solo da linea di comando | 0 - Consentire esecuzione cronjob da browser
+hive_var_exp_43=Impostazioni: Attivare il logging degli errori di debug di Javascript (1/0)
+hive_var_exp_44=Impostazioni: Titolo del sito web per schede e altro
+hive_var_exp_45=Impostazioni: Separatore del titolo per schede nel browser
+hive_var_exp_46=Impostazioni: Mostrare errori PHP sul sito web? (1/0)
+hive_var_exp_47=Impostazioni: Array serializzato con i moduli PHP richiesti; se mancanti viene mostrato un errore (esempio: array("mysqli", "mbstring", "gd"))
+hive_var_exp_48=Impostazioni: Interrompere e mostrare errori MySQL sulla pagina se accadono? (Saranno sempre registrati nella tabella x_log_mysql) (1/0)
+hive_var_exp_49=Impostazioni: 1 - Utilizzare URL SEO | 0 - Non utilizzare URL SEO
+hive_var_exp_50=Impostazioni: Necessario solo se _HIVE_URL_SEO_ == falso [Nome per le variabili di localizzazione Get in array serializzato]
+hive_var_exp_51=Configurazione email: Password SMTP
+hive_var_exp_52=Configurazione email: Nome utente SMTP
+hive_var_exp_53=Configurazione email: Autenticazione SMTP (ssl/tls/falso)
+hive_var_exp_54=Configurazione email: Porta SMTP
+hive_var_exp_55=Configurazione email: Host SMTP
+hive_var_exp_56=Configurazione email: Modalità debug email (0, 1, 2, 3) - Usare 0 in produzione perché produce output di debug sul sito!
+hive_var_exp_57=Configurazione email: Consentire connessioni SSL non sicure? (1/0)
+hive_var_exp_58=Configurazione email: Inviare tutte le email in formato HTML? (1/0)
+hive_var_exp_59=Configurazione email: Nome mittente predefinito
+hive_var_exp_60=Configurazione email: Indirizzo mittente predefinito
+hive_var_exp_61=Configurazione email: Footer predefinito per le email
+hive_var_exp_62=Configurazione email: Header predefinito per le email

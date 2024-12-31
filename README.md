@@ -1,22 +1,22 @@
 # Online-Book-Renting (OBR)
 
-The Online-Book-Renting (obr) system allows you to manage books, display them on a public page, and enable users to rent or donate books.
-
-**Relevant Repository Folders for this Project:**
+Relevant Repository Folders for this Project:
 
 |File/Folder|Description|
 |-----|-----|
-|_changelogs| Versioned Changelogs of this product.|
-|_images| Images for this readme file you are currently looking at and about the project itself. |
-|_licenses| Licenses of included 3rd Party Libraries.|
-|_releases| Versioned Releases of this product. |
+|_docker| We use this folder to build our docker images.|
 |_source| Containts the product, upload content of this folder to your webservers public html directory. |
 |docs| Execute index.html in your browser to get access to the full documentation.|
-|CONTRIBUTING.md| Project contributing rules.|
-|LICENSE.md| License of this project|
-|README.md| Readme you are currently looking at.|
 
-## Book Rental Management
+## Introduction
+
+The Online-Book-Renting (obr) system allows you to manage books, display them on a public page, and enable users to rent or donate books.
+
+![Screenshot](./_screenshots/site_book.png) 
+
+## Features
+
+### Book Rental Management
 
 | **Feature** | **Description** |
 |-------------|-----------------|
@@ -24,7 +24,7 @@ The Online-Book-Renting (obr) system allows you to manage books, display them on
 | **Deadline Tracking** | Monitor if users exceed return deadlines and manage necessary actions. |
 | **Additional Information** | Add notes and user deposits for book security. |
 
-## User and Permission Management
+### User and Permission Management
 
 | **Role** | **Permissions** |
 |----------|-----------------|
@@ -32,7 +32,7 @@ The Online-Book-Renting (obr) system allows you to manage books, display them on
 | **Default Users** | Request and donate books, view available books. |
 | **Guests** | View the entire collection of books without logging in. |
 
-## ISBN API Connections
+### ISBN API Connections
 
 | **Feature** | **Description** |
 |-------------|-----------------|

@@ -3,5 +3,6 @@
 # Block a Folder
 # folder/
 
-# Ignore all HTAccess Files
+# Ignore all htaccess & htpasswd Files
 **/.htaccess*
+**/.htpasswd*

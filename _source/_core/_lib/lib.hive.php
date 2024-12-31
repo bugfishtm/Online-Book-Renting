@@ -49,7 +49,9 @@
 				if(!$sitemod_name) { $sitemod_name = _HIVE_MODE_; }
 			// Prepare Information
 				$array = array();
-				$array["info"]   				= $object["hive_mode_config_pre"]["extension"][$extension_name];
+				if(@$object["hive_mode_config_pre"]["extension"][$extension_name]) {
+					$array["info"]   			= $object["hive_mode_config_pre"]["extension"][$extension_name];
+				} else { $array["info"]   		= array(); }
 				$array["path"]   				= $object["path"]."/_data/".$sitemod_name."/_extension/".$extension_name."/";
 				$array["name"]   				= $extension_name;
 				$array["prefix"] 				= _HIVE_PREFIX_."_".$sitemod_name."__".$extension_name."_";
@@ -60,6 +62,19 @@
 			return $array;
 		}
 
+	#################################################################################################################################################
+	// Extension Functionalities
+	#################################################################################################################################################		
+		function hive__extension_path($hive_mode) {
+			$array = array();
+			if(is_dir(_HIVE_PATH_."/_data/".$hive_mode."/_extension")) { 
+				foreach (glob(_HIVE_PATH_."/_data/".$hive_mode."/_extension/*") as $filename) {
+					if(is_dir($filename)) { 
+						array_push($array, $filename);
+					}
+				}		
+			} return $array;	
+		}
 	#################################################################################################################################################
 	// General Mail Functionality for Default Pages in _action
 	#################################################################################################################################################		
@@ -295,20 +310,6 @@
 				if($denie_access) { x_htaccess_secure($folderpath); }
 			}
 		}	
-		
-	#################################################################################################################################################
-	// Extension Functionalities
-	#################################################################################################################################################		
-		function hive__extension_path($hive_mode) {
-			$array = array();
-			if(is_dir(_HIVE_PATH_."/_data/".$hive_mode."/_extension")) { 
-				foreach (glob(_HIVE_PATH_."/_data/".$hive_mode."/_extension/*") as $filename) {
-					if(is_dir($filename)) { 
-						array_push($array, $filename);
-					}
-				}		
-			} return $array;	
-		}
 
 	#################################################################################################################################################
 	// URL Functionalities

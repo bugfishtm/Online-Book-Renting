@@ -119,3 +119,70 @@ hive_login_msg_recfr_ok=Please check your E-Mail inbox to get a password recover
 hive_login_msg_pwtexpire=This Password Recovery Token has expired! Please retry to recover your account.
 hive_login_msg_recexecerror=Error while trying to recover your password. Please try again to recover your account.
 hive_login_msg_recexecok=You have successfully recovered your password and can now login with your new password.
+
+##########################################################################################
+## Setupable Constant Explanations
+##########################################################################################
+
+hive_var_exp_1=Theme: Default Color for Dynamic Theme Colors
+hive_var_exp_2=Theme: Serialized Array with valid Themes
+hive_var_exp_3=Theme: Default Used Theme
+hive_var_exp_4=Language: Serialized Array with valid Languages
+hive_var_exp_5=Language: Array with Default Language
+hive_var_exp_6=Actions: General Register Form Active? (1=on/0=off)
+hive_var_exp_7=No Explanation yet.
+hive_var_exp_8=Actions: General Recover Form Active? (1=on/0=off)
+hive_var_exp_9=Actions: General Activation Form Active? (1=on/0=off)
+hive_var_exp_10=General Login Form Active? (1=on/0=off)
+hive_var_exp_11=TinyMCE: Plugins Configuration String
+hive_var_exp_12=TinyMCE: Menu Bar Configuration String
+hive_var_exp_13=TinyMCE: Tool Bar Configuration String
+hive_var_exp_14=User Config: Maximum Days Sessions/Cookies are Valid
+hive_var_exp_15=User Config: Time in Minutes token out of Activation Mails are Valid
+hive_var_exp_16=User Config: Block Users after X Fail Logins (can be 0 to disbable)
+hive_var_exp_17=User Config: Time in Minutes User has to wait between Requests (anti flood)
+hive_var_exp_18=User Config: Log old sessions? (Logins, Recoverys, Activations, Mail Changes) (1=on/0=off)
+hive_var_exp_19=User Config: Log User IPs in Database (1=on/0=off)
+hive_var_exp_20=User Config: 1 - Remove Recovery Keys after user Succesfully Logged In | 0 - Preserve Keys
+hive_var_exp_21=User Config: 1 - Allow Multi Login  | 0 - Disable Multi Login 
+hive_var_exp_22=Passwordfilter: Min Signs
+hive_var_exp_23=Passwordfilter: Min Capital Signs
+hive_var_exp_24=Passwordfilter: Min Small Signs
+hive_var_exp_25=Passwordfilter: Min Special Signs
+hive_var_exp_26=Passwordfilter: Min Numeric Signs
+hive_var_exp_27=Initial Created Username
+hive_var_exp_28=Initial Created User Password
+hive_var_exp_29=Captcha: Height Image
+hive_var_exp_30=Captcha: Width Image
+hive_var_exp_31=Captcha: Colors for Captcha (Optional, can be 0)
+hive_var_exp_32=Captcha: Font (If 0 Default Font will be used.)
+hive_var_exp_33=Redis: Activated? 1/0
+hive_var_exp_34=Redis: Host
+hive_var_exp_35=Redis: Port
+hive_var_exp_36=Updater: Title for the Updater on this Site
+hive_var_exp_37=Updater: Code needed for Update? (can be 0 to disable)
+hive_var_exp_38=Settings: Log CURL Class Requests? (1/0)
+hive_var_exp_39=Settings: Block IPs after X Failures (can be 0 to disble)
+hive_var_exp_40=Settings: Log Referers? (1/0)
+hive_var_exp_41=Settings: Default CSRF Code Valid Time in Seconds	
+hive_var_exp_42=Settings: 1 - Only Cronjob Execution from Command Line | 0 - Allow Cronjob Execution in Browser
+hive_var_exp_43=Settings: Activate Javascript Debugging Error Logging (1/0)
+hive_var_exp_44=Settings: Website Title for Tabs and More
+hive_var_exp_45=Settings: Title Spacer for Tabs in Browser
+hive_var_exp_46=Settings: Show PHP Errors on website? (1/0)
+hive_var_exp_47=Settings: Serialized Array with needed PHP Modules, if not existant error is shown (example: array("mysqli", "mbstring", "gd")) 
+hive_var_exp_48=Settings: Stop and Show MySQL Errors on Page if Happening? (Will always be logged in x_log_mysql table!) (1/0)
+hive_var_exp_49=Settings: 1 - Use SEO URLs  | 0 - No SEO URLs Using
+hive_var_exp_50=Settings: Only neeed if _HIVE_URL_SEO_ == false [Name for Get Location Variables in serialized array]
+hive_var_exp_51=Mail Config: SMTP Password 
+hive_var_exp_52=Mail Config: SMTP Username 
+hive_var_exp_53=Mail Config: SMTP Auth (ssl/tls/false) 
+hive_var_exp_54=Mail Config: SMTP Port 
+hive_var_exp_55=Mail Config: SMTP Host 
+hive_var_exp_56=Mail Config: Mail Debug Mode (0, 1, 2, 3) - Use 0 for Production as this will result Debug Output on site!
+hive_var_exp_57=Mail Config: Allow insecure SSL Connections? (1/0)
+hive_var_exp_58=Mail Config: All Mails sended as HTML? (1/0)
+hive_var_exp_59=Mail Config: Default Sender Mail Name
+hive_var_exp_60=Mail Config: Default Sender Mail Adr
+hive_var_exp_61=Mail Config: Default Footer for Mails
+hive_var_exp_62=Mail Config: Default Header for Mails

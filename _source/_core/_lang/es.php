@@ -119,3 +119,70 @@ hive_login_msg_recfr_ok=¡Por favor, revisa tu bandeja de entrada para obtener u
 hive_login_msg_pwtexpire=¡Este token de recuperación de contraseña ha expirado! Por favor, intenta recuperar tu cuenta nuevamente.
 hive_login_msg_recexecerror=Error al intentar recuperar tu contraseña. Por favor intenta recuperar tu cuenta nuevamente.
 hive_login_msg_recexecok=Ha recuperado su contraseña con éxito y ahora puede iniciar sesión con su nueva contraseña.
+
+##########################################################################################
+## Setupable Constant Explanations
+##########################################################################################
+
+hive_var_exp_1=Tema: Color predeterminado para colores temáticos dinámicos
+hive_var_exp_2=Tema: Matriz serializada con temas válidos
+hive_var_exp_3=Tema: Tema predeterminado utilizado
+hive_var_exp_4=Idioma: Matriz serializada con idiomas válidos
+hive_var_exp_5=Idioma: Matriz con el idioma predeterminado
+hive_var_exp_6=Acciones: ¿Formulario general de registro activo? (1=activo/0=inactivo)
+hive_var_exp_7=Sin explicación aún.
+hive_var_exp_8=Acciones: ¿Formulario general de recuperación activo? (1=activo/0=inactivo)
+hive_var_exp_9=Acciones: ¿Formulario general de activación activo? (1=activo/0=inactivo)
+hive_var_exp_10=¿Formulario general de inicio de sesión activo? (1=activo/0=inactivo)
+hive_var_exp_11=TinyMCE: Cadena de configuración de complementos
+hive_var_exp_12=TinyMCE: Cadena de configuración de la barra de menú
+hive_var_exp_13=TinyMCE: Cadena de configuración de la barra de herramientas
+hive_var_exp_14=Config Usuario: Máximo de días en que las sesiones/cookies son válidas
+hive_var_exp_15=Config Usuario: Tiempo en minutos en que los tokens de los correos de activación son válidos
+hive_var_exp_16=Config Usuario: Bloquear usuarios después de X intentos fallidos de inicio de sesión (puede ser 0 para deshabilitar)
+hive_var_exp_17=Config Usuario: Tiempo en minutos que el usuario debe esperar entre solicitudes (anti-flood)
+hive_var_exp_18=Config Usuario: ¿Registrar sesiones antiguas? (inicios de sesión, recuperaciones, activaciones, cambios de correo) (1=activo/0=inactivo)
+hive_var_exp_19=Config Usuario: ¿Registrar IPs de usuarios en la base de datos? (1=activo/0=inactivo)
+hive_var_exp_20=Config Usuario: 1 - Eliminar claves de recuperación después de que el usuario haya iniciado sesión exitosamente | 0 - Conservar claves
+hive_var_exp_21=Config Usuario: 1 - Permitir inicio de sesión múltiple | 0 - Deshabilitar inicio de sesión múltiple
+hive_var_exp_22=Filtro Contraseñas: Mínimo de caracteres
+hive_var_exp_23=Filtro Contraseñas: Mínimo de caracteres en mayúscula
+hive_var_exp_24=Filtro Contraseñas: Mínimo de caracteres en minúscula
+hive_var_exp_25=Filtro Contraseñas: Mínimo de caracteres especiales
+hive_var_exp_26=Filtro Contraseñas: Mínimo de caracteres numéricos
+hive_var_exp_27=Nombre de usuario creado inicialmente
+hive_var_exp_28=Contraseña del usuario creada inicialmente
+hive_var_exp_29=Captcha: Altura de la imagen
+hive_var_exp_30=Captcha: Anchura de la imagen
+hive_var_exp_31=Captcha: Colores para el captcha (Opcional, puede ser 0)
+hive_var_exp_32=Captcha: Fuente (Si es 0 se usará la fuente predeterminada)
+hive_var_exp_33=Redis: ¿Activado? 1/0
+hive_var_exp_34=Redis: Host
+hive_var_exp_35=Redis: Puerto
+hive_var_exp_36=Actualizador: Título para el actualizador en este sitio
+hive_var_exp_37=Actualizador: ¿Código necesario para actualizar? (puede ser 0 para deshabilitar)
+hive_var_exp_38=Configuración: ¿Registrar solicitudes de la clase CURL? (1/0)
+hive_var_exp_39=Configuración: ¿Bloquear IPs después de X fallos? (puede ser 0 para deshabilitar)
+hive_var_exp_40=Configuración: ¿Registrar referencias? (1/0)
+hive_var_exp_41=Configuración: Tiempo válido predeterminado para el código CSRF en segundos
+hive_var_exp_42=Configuración: 1 - Solo ejecución de cronjobs desde línea de comandos | 0 - Permitir ejecución de cronjobs en el navegador
+hive_var_exp_43=Configuración: Activar registro de errores de depuración de JavaScript (1/0)
+hive_var_exp_44=Configuración: Título del sitio web para pestañas y más
+hive_var_exp_45=Configuración: Espaciador de título para pestañas en el navegador
+hive_var_exp_46=Configuración: ¿Mostrar errores de PHP en el sitio web? (1/0)
+hive_var_exp_47=Configuración: Matriz serializada con módulos PHP necesarios; si no existen, se mostrará un error (ejemplo: array("mysqli", "mbstring", "gd"))
+hive_var_exp_48=Configuración: ¿Detener y mostrar errores de MySQL en la página si ocurren? (Siempre se registrarán en la tabla x_log_mysql) (1/0)
+hive_var_exp_49=Configuración: 1 - Usar URLs SEO | 0 - No usar URLs SEO
+hive_var_exp_50=Configuración: Solo necesario si _HIVE_URL_SEO_ == false [Nombre para variables de ubicación GET en matriz serializada]
+hive_var_exp_51=Config Correo: Contraseña SMTP
+hive_var_exp_52=Config Correo: Nombre de usuario SMTP
+hive_var_exp_53=Config Correo: Autenticación SMTP (ssl/tls/false)
+hive_var_exp_54=Config Correo: Puerto SMTP
+hive_var_exp_55=Config Correo: Host SMTP
+hive_var_exp_56=Config Correo: Modo de depuración del correo (0, 1, 2, 3) - Use 0 para producción ya que esto generará salida de depuración en el sitio
+hive_var_exp_57=Config Correo: ¿Permitir conexiones SSL inseguras? (1/0)
+hive_var_exp_58=Config Correo: ¿Enviar todos los correos como HTML? (1/0)
+hive_var_exp_59=Config Correo: Nombre predeterminado del remitente
+hive_var_exp_60=Config Correo: Dirección de correo predeterminada del remitente
+hive_var_exp_61=Config Correo: Pie predeterminado para los correos
+hive_var_exp_62=Config Correo: Encabezado predeterminado para los correos

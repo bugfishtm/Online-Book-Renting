@@ -47,6 +47,7 @@
 			`mod_docs` TEXT DEFAULT NULL COMMENT 'Module Documentation Website',
 			`mod_github` TEXT DEFAULT NULL COMMENT 'Module Github Website',
 			`mod_description` TEXT DEFAULT NULL COMMENT 'Module Description', 
+			`mod_data` TEXT DEFAULT NULL COMMENT 'Additional Module Data', 
 			`mod_singleinstance` int(1) DEFAULT 0 COMMENT 'Module Single Instance?', 
 			`creation` datetime DEFAULT current_timestamp() COMMENT 'Creation Date auto set',
 			`modification` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Modification Date auto set',

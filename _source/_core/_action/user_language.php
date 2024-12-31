@@ -60,12 +60,11 @@
 			/*-----------------------------------------*/
 			/* Eventbox Admin Template Stylesheet */
 			/*-----------------------------------------*/
-
 			/******************************************************* x_class_eventbox  *********/
 			.x_class_eventbox {
 				position: fixed;
-				top: 15px;
-				right: 15px;
+				top: 0px;
+				right: 20px;
 				z-index: 1000 !important;
 			}
 
@@ -74,31 +73,35 @@
 			}
 			.x_class_eventbox_msg {
 				max-width: 500px;
+				border-radius: 5px;
 				padding: 15px;
 				margin-top: 20px;
-				border-radius: 15px;
 			}
 			.x_class_eventbox_msg_ok {
-				background: #2B982B;
-				color: white;
+				background: #D3DFF5;
+				color: #1579CA;
+				border: 1px solid #BDD0F0;
 			}
 			.x_class_eventbox_msg_error {
-				background: #FB483A;
-				color: white;
+				background: #F9D2DA;
+				color: #87112B;
+				border: 1px solid #F6BBC8;
 			}
 			.x_class_eventbox_msg_warning {
-				background: #FF9600;
+				background: #D3DFF5;
+				color: #1579CA;
+				border: 1px solid #BDD0F0;
 			}
 			.x_class_eventbox_msg_info {
-				background: #00B0E4;
-				color: white;
+				background: #D3DFF5;
+				color: #1579CA;
+				border: 1px solid #BDD0F0;
 			}
 			.x_class_eventbox_msg_close {
-				background: #121212;
-				border-radius: 15px;
+				background: #1F2937;
+				border-radius: 5px;
 				padding: 5px;
 				color: white;
-				text-align: center;
 				cursor: pointer;
 				width: 80px;
 				font-weight: bold;
@@ -106,14 +109,14 @@
 				position: absolute;
 				float: right;
 				right: 15px;
+				border: 0px solid black;
+				text-align: center;
 			}
-
 			.x_class_eventbox_msg_close:hover {
-				background: white;
-				color: #121212;
+				background: #E5E7EB;
+				color: black;
+				border: 0px solid black;
 			}
-
-			.x_class_eventbox_msg_text { }
 		</style>
             <div class="container mb-5 mt-5">
                 <div class="row justify-content-center form-bg-image" > <!-- data-background-lg="../../assets/img/illustrations/signin.svg"-->

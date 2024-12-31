@@ -32,7 +32,11 @@
 
 	// Create Asynchronous Process for each file executed.
 		function suitefish_worker_execute($path, $parameters) {
-			$command = sprintf("/usr/bin/php %s %s", escapeshellarg($path), escapeshellarg(json_encode($parameters)));
+			if(trim($parameters ?? '') != "" AND $parameters) { 
+				$command = sprintf("/usr/bin/php %s %s", escapeshellarg($path), escapeshellarg(json_encode($parameters)));
+			} else {
+				$command = sprintf("/usr/bin/php %s", escapeshellarg($path));
+			}
 			$descriptorspec = array(
 				0 => array("pipe", "r"),
 				1 => array("pipe", "w"),
@@ -131,16 +135,20 @@
 						if(!$is_extension) { 
 							$path .= "/_site/".$v["site_module"]."/_worker/worker.".$v["script_execution"].".php";
 						} else { 
-							$path .= "/_data/".$v["site_module"]."/_extension/".$v["site_extension"]."/worker.".$v["script_execution"].".php";
+							$path .= "/_data/".$v["site_module"]."/_extension/".$v["site_extension"]."/_worker/worker.".$v["script_execution"].".php";
 						}
 						if(file_exists($path) && !is_dir($path)) {
 							$parameters = json_decode($v["script_parameters"], true);
 							$process = suitefish_worker_execute($path, $parameters);
 							if ($process !== false) {
-								suitefish_worker_log(date("Y-m-d H:i:s")." - Suitefish - EXECUTION - ".$path."".PHP_EOL);
 								$processes_array[$v['id']] = $process;
-								$object["mysql"]->query("UPDATE ".$valid_object["prefix"]."cms_worker SET script_executed = 1 WHERE id = ?", [$v['id']]);
+								$object["mysql"]->query("UPDATE ".$valid_object["prefix"]."cms_worker SET script_executed = 1 WHERE id = ".$v['id']."");
+								suitefish_worker_log(date("Y-m-d H:i:s")." - Suitefish - EXECUTION RUN - ID[".$v["id"]."] - SITE[".@$v["site_module"]."] - EXT[".@$v["site_extension"]."] - FILE[".basename($path)."]".PHP_EOL);
+							} else {
+								$object["mysql"]->query("UPDATE ".$valid_object["prefix"]."cms_worker SET script_executed = 3 WHERE id = ".$v['id']."");
+								suitefish_worker_log(date("Y-m-d H:i:s")." - Suitefish - EXECUTION FINISH - ID[".$v["id"]."] - SITE[".@$v["site_module"]."] - EXT[".@$v["site_extension"]."] - FILE[".basename($path)."]".PHP_EOL);
 							}
+							
 						}
 					}
 				}
@@ -189,7 +197,10 @@
 					if (!$status['running']) {
 						proc_close($process);
 						unset($processes_array[$id]); 
-						if(is_numeric($id)) { $object["mysql"]->query("UPDATE ".$valid_object["prefix"]."cms_worker SET script_executed = 3 WHERE id = ".$id.""); }
+						if(is_numeric($id)) {
+							$object["mysql"]->query("UPDATE ".$valid_object["prefix"]."cms_worker SET script_executed = 3 WHERE id = ".$id.""); 
+							suitefish_worker_log(date("Y-m-d H:i:s")." - Suitefish - EXECUTION RUN FINISH - ID[".$id."]".PHP_EOL);
+						}
 					}
 				}
 			} else { suitefish_worker_log(date("Y-m-d H:i:s")." - Suitefish - TERMINATED - MySQL Connection Error.".PHP_EOL); usleep(5000000); exit(); }

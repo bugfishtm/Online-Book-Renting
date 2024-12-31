@@ -31,7 +31,7 @@
 	$x = array();
 	
 	// Core Release Version
-	$x["version"] 		= "4.20"; 
+	$x["version"] 		= "4.25"; 
 	
 	// Core Release Codename
 	$x["codename"] 		= "Stingray"; 

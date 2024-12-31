@@ -36,5 +36,4 @@
 		  `token_key` varchar(255) NOT NULL COMMENT 'Token Key in plain Text',
 		  `creation` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Creation Date',
 		  `modification` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Modification Date',
-		  PRIMARY KEY (`id`) USING BTREE );
-	");
+		  PRIMARY KEY (`id`) USING BTREE );");

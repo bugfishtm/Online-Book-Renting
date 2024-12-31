@@ -119,3 +119,70 @@ hive_login_msg_recfr_ok=Bitte überprüfen Sie Ihren E-Mail-Posteingang, um eine
 hive_login_msg_pwtexpire=Dieses Passwort-Wiederherstellungs-Token ist abgelaufen! Bitte versuchen Sie erneut, Ihr Konto wiederherzustellen.
 hive_login_msg_recexecerror=Fehler beim Versuch, Ihr Passwort wiederherzustellen. Bitte versuchen Sie erneut, Ihr Konto wiederherzustellen.
 hive_login_msg_recexecok=Sie haben Ihr Passwort erfolgreich wiederhergestellt und können sich jetzt mit Ihrem neuen Passwort einloggen.
+
+##########################################################################################
+## Setupable Constant Explanations
+##########################################################################################
+
+hive_var_exp_1=Thema: Standardfarbe für dynamische Themenfarben
+hive_var_exp_2=Thema: Serialisiertes Array mit gültigen Themen
+hive_var_exp_3=Thema: Standardmäßig verwendetes Thema
+hive_var_exp_4=Sprache: Serialisiertes Array mit gültigen Sprachen
+hive_var_exp_5=Sprache: Array mit Standardsprache
+hive_var_exp_6=Aktionen: Allgemeines Registrierungsformular aktiv? (1=ein/0=aus)
+hive_var_exp_7=Keine Erklärung verfügbar.
+hive_var_exp_8=Aktionen: Allgemeines Wiederherstellungsformular aktiv? (1=ein/0=aus)
+hive_var_exp_9=Aktionen: Allgemeines Aktivierungsformular aktiv? (1=ein/0=aus)
+hive_var_exp_10=Allgemeines Login-Formular aktiv? (1=ein/0=aus)
+hive_var_exp_11=TinyMCE: Plugin-Konfigurations-String
+hive_var_exp_12=TinyMCE: Menüleisten-Konfigurations-String
+hive_var_exp_13=TinyMCE: Werkzeugleisten-Konfigurations-String
+hive_var_exp_14=Benutzerkonfiguration: Maximale Tage, in denen Sitzungen/Cookies gültig sind
+hive_var_exp_15=Benutzerkonfiguration: Zeit in Minuten, die Token aus Aktivierungsmails gültig sind
+hive_var_exp_16=Benutzerkonfiguration: Benutzer nach X fehlgeschlagenen Logins sperren (0 zum Deaktivieren)
+hive_var_exp_17=Benutzerkonfiguration: Zeit in Minuten, die ein Benutzer zwischen Anfragen warten muss (Anti-Flood)
+hive_var_exp_18=Benutzerkonfiguration: Alte Sitzungen protokollieren? (Logins, Wiederherstellungen, Aktivierungen, Mailänderungen) (1=ein/0=aus)
+hive_var_exp_19=Benutzerkonfiguration: Benutzer-IP-Adressen in der Datenbank protokollieren (1=ein/0=aus)
+hive_var_exp_20=Benutzerkonfiguration: 1 - Wiederherstellungsschlüssel nach erfolgreichem Login entfernen | 0 - Schlüssel behalten
+hive_var_exp_21=Benutzerkonfiguration: 1 - Multi-Login erlauben | 0 - Multi-Login deaktivieren
+hive_var_exp_22=Passwortfilter: Mindestanzahl an Zeichen
+hive_var_exp_23=Passwortfilter: Mindestanzahl an Großbuchstaben
+hive_var_exp_24=Passwortfilter: Mindestanzahl an Kleinbuchstaben
+hive_var_exp_25=Passwortfilter: Mindestanzahl an Sonderzeichen
+hive_var_exp_26=Passwortfilter: Mindestanzahl an Zahlen
+hive_var_exp_27=Initial erstellter Benutzername
+hive_var_exp_28=Initial erstelltes Benutzerpasswort
+hive_var_exp_29=Captcha: Höhe des Bildes
+hive_var_exp_30=Captcha: Breite des Bildes
+hive_var_exp_31=Captcha: Farben für Captcha (Optional, kann 0 sein)
+hive_var_exp_32=Captcha: Schriftart (Wenn 0, wird Standardschriftart verwendet)
+hive_var_exp_33=Redis: Aktiviert? 1/0
+hive_var_exp_34=Redis: Host
+hive_var_exp_35=Redis: Port
+hive_var_exp_36=Updater: Titel des Updaters auf dieser Seite
+hive_var_exp_37=Updater: Code erforderlich für Update? (0 zum Deaktivieren)
+hive_var_exp_38=Einstellungen: CURL-Klassenanfragen protokollieren? (1/0)
+hive_var_exp_39=Einstellungen: IPs nach X Fehlern blockieren (0 zum Deaktivieren)
+hive_var_exp_40=Einstellungen: Referer protokollieren? (1/0)
+hive_var_exp_41=Einstellungen: Standardgültigkeitszeit des CSRF-Codes in Sekunden
+hive_var_exp_42=Einstellungen: 1 - Cronjob-Ausführung nur über Kommandozeile | 0 - Cronjob-Ausführung im Browser erlauben
+hive_var_exp_43=Einstellungen: JavaScript-Debugging-Fehlerprotokollierung aktivieren (1/0)
+hive_var_exp_44=Einstellungen: Website-Titel für Tabs und mehr
+hive_var_exp_45=Einstellungen: Titeltrennzeichen für Tabs im Browser
+hive_var_exp_46=Einstellungen: PHP-Fehler auf der Website anzeigen? (1/0)
+hive_var_exp_47=Einstellungen: Serialisiertes Array mit benötigten PHP-Modulen, falls nicht vorhanden, wird ein Fehler angezeigt (Beispiel: array("mysqli", "mbstring", "gd"))
+hive_var_exp_48=Einstellungen: MySQL-Fehler auf der Seite anzeigen und stoppen, falls sie auftreten? (Wird immer in der x_log_mysql-Tabelle protokolliert) (1/0)
+hive_var_exp_49=Einstellungen: 1 - SEO-URLs verwenden | 0 - Keine SEO-URLs verwenden
+hive_var_exp_50=Einstellungen: Nur erforderlich, wenn _HIVE_URL_SEO_ == false [Name für GET-Location-Variablen im serialisierten Array]
+hive_var_exp_51=Mail-Konfiguration: SMTP-Passwort
+hive_var_exp_52=Mail-Konfiguration: SMTP-Benutzername
+hive_var_exp_53=Mail-Konfiguration: SMTP-Auth (ssl/tls/false)
+hive_var_exp_54=Mail-Konfiguration: SMTP-Port
+hive_var_exp_55=Mail-Konfiguration: SMTP-Host
+hive_var_exp_56=Mail-Konfiguration: Mail-Debug-Modus (0, 1, 2, 3) - Verwenden Sie 0 für die Produktion, da dies Debug-Ausgaben auf der Seite zur Folge hat!
+hive_var_exp_57=Mail-Konfiguration: Unsichere SSL-Verbindungen erlauben? (1/0)
+hive_var_exp_58=Mail-Konfiguration: Alle Mails als HTML versenden? (1/0)
+hive_var_exp_59=Mail-Konfiguration: Standard-Absender-Name
+hive_var_exp_60=Mail-Konfiguration: Standard-Absender-Adresse
+hive_var_exp_61=Mail-Konfiguration: Standard-Footer für Mails
+hive_var_exp_62=Mail-Konfiguration: Standard-Header für Mails
