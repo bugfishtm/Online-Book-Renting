@@ -1,0 +1,22 @@
+/* Dark Mode - Slate Scheme with Deep Orange Primary */
+[data-md-color-scheme=slate][data-md-color-primary=deep-orange] {
+    --md-typeset-a-color: #ff5707; /* Link Color */
+}
+[data-md-color-primary=deep-orange] {
+    --md-primary-fg-color: #ff5707; /* Primary Color */
+}
+
+
+.md-button {
+	border-color: #ff5707 !important;
+	border-radius: 5px !important;
+}
+
+.md-button:hover {
+	background: #ff5707 !important;
+}
+
+.md-nav__source:hover {
+	background: #242424;
+	color: white !important;
+}

@@ -1,0 +1,18 @@
+############################################################################################################
+# This Compose File will be substituted before deployment!
+############################################################################################################
+services:
+  dummy:
+    image: bugfishtm/dummy:latest
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: "${var_user}"
+      MYSQL_PASSWORD: "${var_password}"
+      MYSQL_ROOT_PASSWORD: "${var_password}"
+    ports:
+      - '${var_port}:3306'
+    volumes:
+      - dummy:/var/lib/mysql
+# Names our volume
+volumes:
+  dummy:

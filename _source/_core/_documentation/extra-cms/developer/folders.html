@@ -1,0 +1,1961 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="corelib.html">
+      
+      
+        <link rel="next" href="vendor.html">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Folders - Suitefish CMS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "Suitefish CMS",
+    }
+    </script>
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "TechArticle",
+	  "headline": "Folders",
+	  "description": "Here you can see the folder structure  of the CMS. For information about the modules folder structure see the different modules sections in this documentation.",
+	  "articleSection": "Introduction",
+	  "datePublished": "2024-08-19",
+	  "dateModified": "2024-08-19",
+	  "author": {
+		"@type": "Person",
+		"name": "Jan-Maurice Dahlmanns"
+	  },
+	  "publisher": {
+		"@type": "Organization",
+		"name": "Bugfish",
+		"logo": {
+		  "@type": "ImageObject",
+		  "url": "../logo.png"
+		}
+	  }
+	}
+	</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="subject" content="documentation">
+	<meta name="copyright" content="bugfish">
+	<meta name="language" content="en">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="bugfish, ynvnzmlzaa@gmail.com">
+	
+	
+	<meta property="og:title" content="Folders - Suitefish CMS">
+	<meta name="description" content="Here you can see the folder structure  of the CMS. For information about the modules folder structure see the different modules sections in this documentation.">  
+	<meta name="og:description" content="Here you can see the folder structure  of the CMS. For information about the modules folder structure see the different modules sections in this documentation.">  
+	<meta property="og:image" content="../meta.png">
+    
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#folder-structure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Suitefish CMS" class="md-header__button md-logo" aria-label="Suitefish CMS" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Suitefish CMS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Folders
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bugfishtm/suitefish-cms" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    suitefish-cms
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Suitefish CMS" class="md-nav__button md-logo" aria-label="Suitefish CMS" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Suitefish CMS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bugfishtm/suitefish-cms" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    suitefish-cms
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screenshots.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Screenshots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Core Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="corelib.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Folders
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="folders.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Folders
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#__cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      /__cache/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#__rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      /__rollback/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_core" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/_core/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_core_action" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_action/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_captcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_captcha/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_documentation/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_error/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_font" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_font/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_framework/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_image/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_lang/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_lib" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_lib/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_licenses/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_mysql/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_template/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_vendor/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_coreinitializephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/initialize.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_corejavascriptphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/javascript.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_corestylesheetphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/stylesheet.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_coreversionphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/version.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_coreworkerphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/worker.php
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/_data/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/_data/MODULE/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_css" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_css/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_docker/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension-disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension-disabled/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension-private/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension-public/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_meta/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_php" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_php/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_private/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_public/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_theme/
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_image/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_site" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_site/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_store" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_store/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_template/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cfg_ruleset_samplephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /cfg_ruleset_sample.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core_updatephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /core_update.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronjobphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /cronjob.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developerphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /developer.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /index.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installerphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /installer.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robotstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      /robots.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      /.htaccess
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settingsphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /settings.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings_samplephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /settings_sample.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updaterphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /updater.php
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vendor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3rd Party
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modules Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Modules Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-site.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-ext.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extension Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-image.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-software.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-docker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-theme.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theme Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bugfishtm.blogspot.com/2023/05/impressum.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Impressum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bugfishtm.blogspot.com/2023/05/privacy.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bugfishtm.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    More by Bugfish
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#__cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      /__cache/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#__rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      /__rollback/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_core" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/_core/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_core_action" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_action/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_captcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_captcha/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_documentation/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_error/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_font" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_font/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_framework/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_image/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_lang/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_lib" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_lib/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_licenses/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_mysql/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_template/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_core_vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/_vendor/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_coreinitializephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/initialize.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_corejavascriptphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/javascript.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_corestylesheetphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/stylesheet.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_coreversionphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/version.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_coreworkerphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_core/worker.php
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/_data/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/_data/MODULE/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_css" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_css/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_docker/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension-disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension-disabled/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension-private/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_extension-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_extension-public/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_meta/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_php" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_php/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_private" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_private/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_public" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_public/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_datamodule_theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_data/MODULE/_theme/
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_image/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_site" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_site/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_store" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_store/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      /_template/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cfg_ruleset_samplephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /cfg_ruleset_sample.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core_updatephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /core_update.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronjobphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /cronjob.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developerphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /developer.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /index.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installerphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /installer.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robotstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      /robots.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      /.htaccess
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settingsphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /settings.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings_samplephp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /settings_sample.php
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updaterphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      /updater.php
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="folder-structure">Folder Structure</h1>
+<p>Here you can see the folder structure  of the CMS. For information about the modules folder structure see the different modules sections in this documentation.</p>
+<h2 id="__cache">/__cache/</h2>
+<p>Temporary Hidden Folder for Core Updates and other Operations.</p>
+<h2 id="__rollback">/__rollback/</h2>
+<p>Temporary Folder for Core Updates and other Operations.</p>
+<h2 id="_core">/_core/</h2>
+<p>The <code>_core</code> folder contains core code and will be overwritten during core updates.</p>
+<h3 id="_core_action">/_core/_action/</h3>
+<p>Actions for various purposes...</p>
+<table>
+<thead>
+<tr>
+<th>Folder Structure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admin_switch.php</td>
+<td>Page to Switch between Backend and Frontend. Can be accessed diretly through browser.</td>
+</tr>
+<tr>
+<td>js_debug_action.php</td>
+<td>External Action for the Debugging of Javascript Code, if Activated in Config will Log Errors in Javascript Commands in the Logging Table.</td>
+</tr>
+<tr>
+<td>token_switch.php</td>
+<td>Page to switch between Site Modules with Tokens if activated in cfg-ruleset.php Can be accessed diretly through browser.</td>
+</tr>
+<tr>
+<td>user_activate.php</td>
+<td>General Action Script to Activate Accounts via Mail. Can be accessed diretly through browser if activated in Site Modules Config.</td>
+</tr>
+<tr>
+<td>user_login.php</td>
+<td>General Login page. Can be accessed diretly through browser if activated in Site Modules Config.</td>
+</tr>
+<tr>
+<td>user_logout.php</td>
+<td>General Logout Page.</td>
+</tr>
+<tr>
+<td>user_mail_change.php</td>
+<td>Change Mail of current Account Page. Can be accessed diretly through browser if activated in Site Modules Config.</td>
+</tr>
+<tr>
+<td>user_recover.php</td>
+<td>Recover Account Password per Mail if not Logged in. Can be accessed diretly through browser if activated in Site Modules Config.</td>
+</tr>
+<tr>
+<td>user_register.php</td>
+<td>Register New Account. Can be accessed diretly through browser if activated in Site Modules Config.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_core_captcha">/_core/_captcha/</h3>
+<p>Contains captcha images for inclusion in your project. Refer to the documentation for session variable details to store captcha tokens.Capchta Image with Code Generation at $<em>SESSION[HIVE_SITE_COOKIE</em>."captcha.filename"].</p>
+<h3 id="_core_documentation">/_core/_documentation/</h3>
+<p>Folders with included documentation to view offline.</p>
+<h3 id="_core_error">/_core/_error/</h3>
+<p>Default error templates used in <code>.htaccess</code> and for project integration. Use as full-page templates to include HTTP error codes.</p>
+<h3 id="_core_font">/_core/_font/</h3>
+<p>Stores included font files. Check the license for each font in the documentation or the <code>_licenses</code> folder.</p>
+<h3 id="_core_framework">/_core/_framework/</h3>
+<p>Contains Bugfish Framework files included automatically in <code>javascript.php</code> and <code>stylesheet.php</code> during initialization.</p>
+<h3 id="_core_image">/_core/_image/</h3>
+<p>Default JPG/PNG/ICO images used in various CMS sections.</p>
+<h3 id="_core_lang">/_core/_lang/</h3>
+<p>Default language translation files. Automatically loaded based on the <code>_HIVE_LANG_</code> constant, which controls the displayed language.</p>
+<h3 id="_core_lib">/_core/_lib/</h3>
+<p>Core function library of the CMS, included automatically during site initialization.</p>
+<h3 id="_core_licenses">/_core/_licenses/</h3>
+<p>Library of included vendor library licenses.</p>
+<h3 id="_core_mysql">/_core/_mysql/</h3>
+<p>Contains MySQL core system tables installed during site initialization, as specified in <code>initialize.php</code>.</p>
+<h3 id="_core_template">/_core/_template/</h3>
+<p>Site Module examples and explanations.</p>
+<h3 id="_core_vendor">/_core/_vendor/</h3>
+<p>3rd party scripts, functions, and templates. Include these in your module to add new functionalities or UX features. Licenses can be found in the documentation or <code>_licenses</code> folder.</p>
+<h3 id="_coreinitializephp">/_core/initialize.php</h3>
+<p>Initializes site functionalities and includes variables, referenced by <code>settings.php</code>.</p>
+<h3 id="_corejavascriptphp">/_core/javascript.php</h3>
+<p>JavaScript loader for framework, module, and extension-related scripts. Include this file in your project's header as a standard JS script file.</p>
+<h3 id="_corestylesheetphp">/_core/stylesheet.php</h3>
+<p>CSS loader for framework, module, and extension-related stylesheets. Include this file in your project's header as a standard CSS file.</p>
+<h3 id="_coreversionphp">/_core/version.php</h3>
+<p>Contains versioning information for the core system.</p>
+<h3 id="_coreworkerphp">/_core/worker.php</h3>
+<p>Background Worker Script.</p>
+<h2 id="_data">/_data/</h2>
+<p>The <code>_data</code> folder contains all dynamic data for site modules and their extensions. Within the <code>_data</code> directory, a corresponding folder for each site module (based on the module's folder name in <code>_site</code>) is automatically created to store this data. This includes all on-site uploads and data that are not part of the module's source code, which remains in <code>_site</code>. If these folders are deleted, they will be automatically recreated by the CMS. Upgrades won't touch this folder.</p>
+<h3 id="_datamodule">/_data/MODULE/</h3>
+<p>A folder matching the site module name in <code>_site</code> is created here to store its data. If the <code>_site</code> module folder is renamed, this <code>_data</code> folder must also be renamed to maintain the connection between the module and its data during CMS initialization.</p>
+<h4 id="_datamodule_css">/_data/MODULE/_css/</h4>
+<p>Public usable and auto-injected CSS Scripts.</p>
+<h4 id="_datamodule_docker">/_data/MODULE/_docker/</h4>
+<p>Stores Docker related files for this Site Module.</p>
+<h4 id="_datamodule_extension">/_data/MODULE/_extension/</h4>
+<p>Stores active extensions for the site module.</p>
+<h4 id="_datamodule_extension-disabled">/_data/MODULE/_extension-disabled/</h4>
+<p>Stores inactive extensions for the site module.</p>
+<h4 id="_datamodule_extension-private">/_data/MODULE/_extension-private/</h4>
+<p>Stores Private Data for Extensions.</p>
+<h4 id="_datamodule_extension-public">/_data/MODULE/_extension-public/</h4>
+<p>Stores Public Data for Extensions.</p>
+<h4 id="_datamodule_meta">/_data/MODULE/_meta/</h4>
+<p>Uploaded public meta images.</p>
+<h4 id="_datamodule_php">/_data/MODULE/_php/</h4>
+<p>Uploaded public executable PHP Scripts.</p>
+<h4 id="_datamodule_private">/_data/MODULE/_private/</h4>
+<p>Contains private data for the module, protected by HTACCESS. Access to this data requires PHP handlers with appropriate access controls or predefined scripts.</p>
+<h4 id="_datamodule_public">/_data/MODULE/_public/</h4>
+<p>Stores public data for site modules, accessible without PHP scripts. This folder is not HTACCESS secured, allowing hardlinking.</p>
+<h4 id="_datamodule_theme">/_data/MODULE/_theme/</h4>
+<p>Stores Themes for Site Module. Deactivated Themes are in the __disabled folder inside this folder.</p>
+<h2 id="_image">/_image/</h2>
+<p>Contains installed and active image modules. It's recommended to manage these through the Administrator Interface; manual edits are not advised. Refer to the documentation for module development. Inactive Image Modules are stored in the <code>__disabled</code> folder.</p>
+<h2 id="_site">/_site/</h2>
+<p>Holds installed and active site modules. Use the Administrator Interface for management; manual edits are not advised. Refer to the documentation for more information. Inactive Site Modules are stored in the <code>__disabled</code> folder.</p>
+<h2 id="_store">/_store/</h2>
+<p>The <code>_store</code> folder manages cache files from downloaded items via the internal store, as well as files for deploying modules, core versions, or software through the CMS. Core updates do not affect this folder, except for PHP files in <code>_store/*.php</code> which may be updated during core releases.</p>
+<h2 id="_template">/_template/</h2>
+<p>This folder houses template files downloaded by the internal store pages or uploaded manually. The __cache folder serves as cache folder for backend operations</p>
+<h2 id="cfg_ruleset_samplephp">/cfg_ruleset_sample.php</h2>
+<p>Sample configuration file for developers to modify CMS settings. Rename to <code>cfg_ruleset.php</code> to apply changes. Check the file for configuration parameters. It is reommended to set this file up via the administrator interface.</p>
+<h2 id="core_updatephp">/core_update.php</h2>
+<p>File to upgrade Administrator and Core CMS if logged in in Administrator Module. Only works together with the official administrator module..</p>
+<h2 id="cronjobphp">/cronjob.php</h2>
+<p>Cronjob of the CMS, should be set up on server to run hourly.</p>
+<h2 id="developerphp">/developer.php</h2>
+<p>Files for developers to control site functionalities during development. More details are available in the documentation.</p>
+<h2 id="indexphp">/index.php</h2>
+<p>Main index file to initialize the CMS and load the current website section. </p>
+<h2 id="installerphp">/installer.php</h2>
+<p>Installation script to set up the CMS on the web server and create the <code>settings.php</code> file if it does not exist.</p>
+<h2 id="robotstxt">/robots.txt</h2>
+<p>Automatically created file for managing search engine robots. Changes to this file will be persistent.</p>
+<h2 id="htaccess">/.htaccess</h2>
+<p>Automatically created file for server configuration. Changes to this file will be persistent and include explanations for usable configurations.</p>
+<h2 id="settingsphp">/settings.php</h2>
+<p>Created after a successful installation using <code>installer.php</code> or by manually editing and renaming <code>settings_sample.php</code>. </p>
+<h2 id="settings_samplephp">/settings_sample.php</h2>
+<p>Sample settings file used if the installer fails to create <code>settings.php</code>. Manual changes are not required if using the default installer.</p>
+<h2 id="updaterphp">/updater.php</h2>
+<p>Script for deploying site mode build updates. Further details can be found in the documentation.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

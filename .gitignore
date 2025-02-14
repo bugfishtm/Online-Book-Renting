@@ -1,0 +1,8 @@
+# Block a File
+# folder/file.php
+# Block a Folder
+# folder/
+
+# Ignore all htaccess & htpasswd Files
+# **/.htaccess*
+# **/.htpasswd*

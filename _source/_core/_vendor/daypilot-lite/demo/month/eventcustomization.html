@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Customization (Open-Source JavaScript Monthly Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+	<!-- /head -->
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+<!-- /top -->
+
+<div class="note">Read more about <a href="https://doc.daypilot.org/month/event-customization/">event customization</a>.</div>
+
+<div id="dp"></div>
+
+<script type="text/javascript">
+    var dp = new DayPilot.Month("dp");
+
+    // view
+    dp.startDate = "2022-03-01";
+
+    dp.events.list = [
+        {
+            "start": "2022-03-26T00:00:00",
+            "end": "2022-03-26T12:00:00",
+            "id": "43cefad6-8cea-d4b9-9b33-029fb1ff086d",
+            "text": "Event 1",
+            "tags": {
+                "type": "note"
+            }
+        },
+        {
+            "start": "2022-03-06T00:00:00",
+            "end": "2022-03-06T12:00:00",
+            "id": "cb122202-5263-f467-73b3-643e4683bbc7",
+            "text": "Event 2",
+            "tags": {
+                "type": "complete"
+            }
+        },
+        {
+            "start": "2022-03-03T00:00:00",
+            "end": "2022-03-03T12:00:00",
+            "id": "5a8376d2-8e3d-9739-d5d9-c1fba6ec02f9",
+            "text": "Event 3"
+        },
+        {
+            "start": "2022-02-25T00:00:00",
+            "end": "2022-02-27T12:00:00",
+            "id": "1fa34626-113a-ccb7-6a38-308e6cbe571e",
+            "text": "Event 4",
+            "tags": {
+                "type": "important"
+            }
+        },
+        {
+            "start": "2022-03-02T00:00:00",
+            "end": "2022-03-02T12:00:00",
+            "id": "0ce20411-4344-1ac1-a777-c8e22fb5ff8a",
+            "text": "Event 5"
+        },
+        {
+            "start": "2022-03-04T00:00:00",
+            "end": "2022-03-07T12:00:00",
+            "id": "7c5d66f8-d00e-f289-31b0-10b256dd15c6",
+            "text": "Event 6",
+            "tags": {
+                "type": "warning"
+            }
+        },
+        {
+            "start": "2022-03-03T00:00:00",
+            "end": "2022-03-03T12:00:00",
+            "id": "61631b1c-300c-a78c-4b83-ebda6e448ca4",
+            "text": "Event 7"
+        },
+        {
+            "start": "2022-03-02T00:00:00",
+            "end": "2022-03-02T12:00:00",
+            "id": "8757ccba-55af-03be-7405-57f1104b1750",
+            "text": "Event 8"
+        },
+        {
+            "start": "2022-03-02T00:00:00",
+            "end": "2022-03-02T12:00:00",
+            "id": "74641c6e-a2a2-15fe-f2f6-745318655745",
+            "text": "Event 9"
+        }
+    ];
+
+    // event creating
+    dp.onTimeRangeSelected = function (args) {
+        var name = prompt("New event name:", "Event");
+        dp.clearSelection();
+        if (!name) return;
+        var e = new DayPilot.Event({
+            start: args.start,
+            end: args.end,
+            id: DayPilot.guid(),
+            text: name
+        });
+        dp.events.add(e);
+    };
+
+    dp.onEventClicked = function(args) {
+        alert("clicked: " + args.e.id());
+    };
+
+    dp.onBeforeEventRender = function(args) {
+        var type = args.data.tags && args.data.tags.type;
+        switch (type) {
+            case "important":
+                args.data.fontColor = "#fff";
+                args.data.backColor = "#E06666";
+                args.data.borderColor = "#E06666";
+                args.data.barHidden = true;
+                break;
+            case "note":
+                args.data.fontColor = "#000";
+                args.data.backColor = "#9FC5E8";
+                args.data.borderColor = "#3D85C6";
+                break;
+            case "warning":
+                args.data.fontColor = "#000";
+                args.data.backColor = "#FFE599";
+                args.data.borderColor = "#F1C232";
+                args.data.barColor = "#F1C232";
+                break;
+            case "complete":
+                args.data.fontColor = "#000";
+                args.data.backColor = "#B6D7A8";
+                args.data.borderColor = "#6AA84F";
+                args.data.barColor = "#6AA84F";
+                break;
+        }
+    };
+
+    dp.init();
+
+
+</script>
+
+<!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+
