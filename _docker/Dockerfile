@@ -3,19 +3,15 @@
 ############################################################################################################
 FROM php:8.4-apache
 
-######################################################
-# Update APT Library
-######################################################
+############################################################################################################
+# Update APT Library and Upgrade System
+############################################################################################################
 RUN apt update -y
-
-######################################################
-# Upgrade System
-######################################################
 RUN apt upgrade -y
 
-######################################################
+############################################################################################################
 # Install Dependencies
-######################################################
+############################################################################################################
 RUN apt install apache2 -y
 RUN apt install curl -y
 RUN apt install cron -y
@@ -25,14 +21,13 @@ RUN apt install libpng-dev -y
 RUN apt install zlib1g-dev -y
 RUN apt install libcurl4-openssl-dev -y
 RUN apt install openssl -y
-RUN apt install openssl -y
 RUN apt install libicu-dev -y
 RUN apt install libxml2-dev -y
 RUN apt install libzip-dev -y
 
-######################################################
+############################################################################################################
 # Install PHP Extensions
-######################################################
+############################################################################################################
 RUN docker-php-ext-install mysqli 
 RUN docker-php-ext-install curl
 RUN docker-php-ext-install bcmath
@@ -45,9 +40,9 @@ RUN docker-php-ext-install zip
 RUN docker-php-ext-install ctype
 RUN docker-php-ext-install filter
 
-######################################################
+############################################################################################################
 # Set Timezone
-######################################################
+############################################################################################################
 ENV TZ=${sf_timezone}
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo "$TZ" > /etc/timezone
 
@@ -82,10 +77,6 @@ COPY _source/ /var/www/html/
 # Generate Default Apache2 Certificate (Self Signed)
 ######################################################
 RUN mkdir -p /opt/sf_ssl
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-    -keyout /opt/sf_ssl/privkey.pem \
-    -out /opt/sf_ssl/cert.pem \
-    -subj "/C=US/ST=State/L=City/O=Organization/OU=OrgUnit/CN=example.com"
 
 ############################################################################################################
 # Install MySQL
@@ -93,18 +84,44 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt install mariadb-client -y
 RUN apt install mariadb-server -y
-ENV MYSQL_ROOT_PASSWORD=${sf_db_pass}
-ENV MYSQL_DATABASE=${sf_db_name}
 RUN echo "[mysqld]\n\
 skip-networking=0\n\
 bind-address=0.0.0.0" > /etc/mysql/mariadb.conf.d/99-custom.cnf
 
 ############################################################################################################
+# Setup Website Cronjob Hourly with Root Access
+############################################################################################################
+RUN echo "0 * * * * /usr/local/bin/php /var/www/html/cronjob.php 2>&1" >> /etc/cron.d/my-cron-jobs
+
+############################################################################################################
+# Install Supervisor
+############################################################################################################
+RUN apt-get install -y supervisor
+COPY ./_script/suitefish_cron.conf /etc/supervisor/conf.d/suitefish_cron.conf
+COPY ./_script/suitefish_apache2.conf /etc/supervisor/conf.d/suitefish_apache2.conf
+COPY ./_script/suitefish_mysql.conf /etc/supervisor/conf.d/suitefish_mysql.conf
+COPY ./_script/suitefish_suitefish.conf /etc/supervisor/conf.d/suitefish_suitefish.conf
+
+############################################################################################################
+# Copy Entrypoint Script
+############################################################################################################
+COPY ./_script/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+COPY ./_script/restart_mysql.sh /restart_mysql.sh
+RUN chmod +x /restart_mysql.sh
+
+############################################################################################################
+# Cleanup Image
+############################################################################################################
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
+
+############################################################################################################
+# Add Entrypoint
+############################################################################################################
+ENTRYPOINT ["/entrypoint.sh"]
+
+############################################################################################################
 # Startup Instructions
 ############################################################################################################
-CMD service mariadb start && \
-    chmod 0770 /var/www -R && \
-    chown www-data:www-data /var/www -R && \
-    mysql -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('${sf_db_pass}');" && \
-    mysql -u root -p${sf_db_pass} -e "CREATE DATABASE IF NOT EXISTS ${sf_db_name};" && \
-    apachectl -D FOREGROUND
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf", "--silent"]

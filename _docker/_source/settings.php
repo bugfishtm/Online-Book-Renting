@@ -31,19 +31,19 @@
 
 	/* MySQL Settings */
 		// MySQL Hostname, usually 'localhost' if your database is on the same server
-		$mysql['host'] 		= getenv('sf_db_host');
+		$mysql['host'] 		= "127.0.0.1";
 
 		// MySQL Port, the default port for MySQL is 3306
 		$mysql['port'] 		= '3306';
 
 		// MySQL User, replace 'MYSQL_USER' with your actual MySQL username
-		$mysql['user'] 		= getenv('sf_db_user');
+		$mysql['user'] 		= "root";
 
 		// MySQL Password, replace 'MYSQL_PASSWORD' with your actual MySQL password
 		$mysql['pass'] 		= getenv('sf_db_pass');
 
 		// MySQL Database, replace 'MYSQL_DATABASE' with the name of your database
-		$mysql['db'] 		= getenv('sf_db_name');
+		$mysql['db'] 		= "suitefish";
 
 		// Prefix for MySQL tables, this is useful if you're sharing the database with other applications
 		$mysql['prefix'] 	= 'sf_';
@@ -59,7 +59,7 @@
 		$object['url'] 		= getenv('sf_url');
 
 	/* Do not change below! */
-		define("_HIVE_IS_IN_DOCKER_", true);
+		if(!defined("_HIVE_IS_IN_DOCKER_")) { define("_HIVE_IS_IN_DOCKER_", true); }
 		
 	/* Do not change below! */
 		// Check if the core initialization file exists and require it if it does
