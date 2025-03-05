@@ -2,36 +2,43 @@
 
 ## 🔍 Overview
 
-The descriptions below are placeholders for other repositories, including the Docker images and the content within this repository.
+The Online-Book-Renting (obr) system allows you to manage books, display them on a public page, and enable users to rent or donate books.
 
+![Screenshot](./_screenshots/site_book.png) 
 
+### Features
 
+#### Book Rental Management
 
+| **Feature** | **Description** |
+|-------------|-----------------|
+| **Book Rental** | Rent books to users and set return deadlines. |
+| **Deadline Tracking** | Monitor if users exceed return deadlines and manage necessary actions. |
+| **Additional Information** | Add notes and user deposits for book security. |
 
+#### ISBN API Connections
 
+| **Feature** | **Description** |
+|-------------|-----------------|
+| **ISBN API** | Enable API connections to automatically retrieve and pre-fill book details. |
 
-
-
-
-
-
-### User Management
+#### User Management
 
 The software includes a powerful user management system, allowing administrators to create, manage, and organize users efficiently. This system helps ensure that user-related tasks are streamlined and secure.
 
-### Access Control
+#### Access Control
 
 The software offers an advanced permission management system that allows you to define and control user access to specific features and resources. This helps maintain security and ensures that sensitive information is protected.
 
-### Multi-Language Support
+#### Multi-Language Support
 
 This project supports multiple languages, including German, English, Spanish, Italian, French, Japanese, Chinese, Russian, Hindi, Portuguese, Korean, and Turkish. You can add new languages or modify existing text on the website by overriding translations.
 
-### Troubleshooting
+#### Troubleshooting
 
 The software comes with built-in debugging tools to help identify and resolve errors quickly. These features provide detailed logs and error reports, making it easier for developers to troubleshoot and enhance the software during the development process.
 
-### Powered by Suitefish
+#### Powered by Suitefish
 
 This project has been created with [Suitefish-CMS](https://github.com/bugfishtm/suitefish-cms). The Backend consists of a various set of Suitefish functionalities and the full included [Bugfish-Framework](https://github.com/bugfishtm/bugfish-framework).
 
