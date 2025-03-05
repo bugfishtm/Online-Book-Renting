@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Picker (Open-Source JavaScript Monthly Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+	<!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+<!-- /top -->
+
+<div class="tools">
+    <a href="#" id="start">Change</a>
+</div>
+
+
+<div id="dp"></div>
+
+<script type="text/javascript">
+
+    const picker = new DayPilot.DatePicker({
+        target: 'start',
+        pattern: 'yyyy-MM-dd',
+        onTimeRangeSelected: (args) => {
+            dp.update({startDate: args.start});
+        }
+    });
+
+
+    const dp = new DayPilot.Month("dp", {
+        onEventClicked: (args) => {
+            alert("clicked: " + args.e.id());
+        },
+        onTimeRangeSelected: (args) => {
+            var name = prompt("New event name:", "Event");
+            dp.clearSelection();
+            if (!name) return;
+            var e = new DayPilot.Event({
+                start: args.start,
+                end: args.end,
+                id: DayPilot.guid(),
+                text: name
+            });
+            dp.events.add(e);
+        }
+    });
+    dp.init();
+
+
+    const app = {
+        elements: {
+            start: document.getElementById('start')
+        },
+        init() {
+            this.addEventHandlers();
+            this.loadEventData();
+        },
+        addEventHandlers() {
+            this.elements.start.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                this.change();
+            });
+        },
+        loadEventData() {
+            const events = [];
+            for (let i = 0; i < 10; i++) {
+                const duration = Math.floor(Math.random() * 1.2);
+                const start = Math.floor(Math.random() * 6);
+
+                events.push({
+                    start: DayPilot.Date.today().firstDayOfMonth().addDays(start),
+                    end: DayPilot.Date.today().firstDayOfMonth().addDays(start).addDays(duration),
+                    id: DayPilot.guid(),
+                    text: "Event " + i
+                });
+            }
+            dp.update({events});
+        },
+        change() {
+            picker.show();
+        }
+    };
+    app.init();
+
+
+</script>
+
+<!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

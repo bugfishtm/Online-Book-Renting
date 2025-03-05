@@ -1,0 +1,243 @@
+{
+    "emptyTable": "Nenhum dado disponível na tabela",
+    "info": "Mostrando _START_ até _END_ de _TOTAL_ entradas",
+    "infoEmpty": "Mostrando 0 até 0 de 0 entradas",
+    "infoFiltered": "(filtrado de _MAX_ entradas totais)",
+    "infoThousands": ",",
+    "lengthMenu": "Mostrar _MENU_ entradas",
+    "loadingRecords": "Carregando...",
+    "processing": "Processando...",
+    "search": "Buscar:",
+    "zeroRecords": "Nenhum registro correspondente encontrado",
+    "thousands": ",",
+    "paginate": {
+        "first": "Primeiro",
+        "last": "Último",
+        "next": "Próximo",
+        "previous": "Anterior"
+    },
+    "aria": {
+        "sortAscending": ": ativar para classificar a coluna em ordem crescente",
+        "sortDescending": ": ativar para classificar a coluna em ordem decrescente"
+    },
+    "autoFill": {
+        "cancel": "Cancelar",
+        "fill": "Preencher todas as células com <i>%d<\/i>",
+        "fillHorizontal": "Preencher células horizontalmente",
+        "fillVertical": "Preencher células verticalmente"
+    },
+    "buttons": {
+        "collection": "Coleção <span class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s'\/>",
+        "colvis": "Visibilidade da Coluna",
+        "colvisRestore": "Restaurar visibilidade",
+        "copy": "Copiar",
+        "copyKeys": "Pressione ctrl ou u2318 + C para copiar os dados da tabela para a área de transferência.<br><br>Para cancelar, clique nesta mensagem ou pressione escape.",
+        "copySuccess": {
+            "1": "Copiado 1 linha para a área de transferência",
+            "_": "Copiadas %d linhas para a área de transferência"
+        },
+        "copyTitle": "Copiar para a área de transferência",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Mostrar todas as linhas",
+            "_": "Mostrar %d linhas"
+        },
+        "pdf": "PDF",
+        "print": "Imprimir",
+        "updateState": "Atualizar",
+        "stateRestore": "Estado %d",
+        "savedStates": "Estados salvos",
+        "renameState": "Renomear",
+        "removeState": "Remover",
+        "removeAllStates": "Remover todos os estados",
+        "createState": "Criar estado"
+    },
+    "searchBuilder": {
+        "add": "Adicionar condição",
+        "button": {
+            "0": "Construtor de pesquisa",
+            "_": "Construtor de pesquisa (%d)"
+        },
+        "clearAll": "Limpar tudo",
+        "condition": "Condição",
+        "conditions": {
+            "date": {
+                "after": "Após",
+                "before": "Antes",
+                "between": "Entre",
+                "empty": "Vazio",
+                "equals": "Igual a",
+                "not": "Não",
+                "notBetween": "Não entre",
+                "notEmpty": "Não vazio"
+            },
+            "number": {
+                "between": "Entre",
+                "empty": "Vazio",
+                "equals": "Igual a",
+                "gt": "Maior que",
+                "gte": "Maior ou igual a",
+                "lt": "Menor que",
+                "lte": "Menor ou igual a",
+                "not": "Não",
+                "notBetween": "Não entre",
+                "notEmpty": "Não vazio"
+            },
+            "string": {
+                "contains": "Contém",
+                "empty": "Vazio",
+                "endsWith": "Termina com",
+                "equals": "Igual a",
+                "not": "Não",
+                "notEmpty": "Não vazio",
+                "startsWith": "Começa com",
+                "notContains": "Não contém",
+                "notStartsWith": "Não começa com",
+                "notEndsWith": "Não termina com"
+            },
+            "array": {
+                "without": "Sem",
+                "notEmpty": "Não vazio",
+                "not": "Não",
+                "contains": "Contém",
+                "empty": "Vazio",
+                "equals": "Igual a"
+            }
+        },
+        "data": "Dados",
+        "deleteTitle": "Excluir regra de filtro",
+        "leftTitle": "Deslocar critério para a esquerda",
+        "logicAnd": "E",
+        "logicOr": "Ou",
+        "rightTitle": "Deslocar critério para a direita",
+        "title": {
+            "0": "Construtor de pesquisa",
+            "_": "Construtor de pesquisa (%d)"
+        },
+        "value": "Valor"
+    },
+    "searchPanes": {
+        "clearMessage": "Limpar tudo",
+        "collapse": {
+            "0": "Painéis de Pesquisa",
+            "_": "Painéis de Pesquisa (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Sem Painéis de Pesquisa",
+        "loadMessage": "Carregando Painéis de Pesquisa",
+        "title": "Filtros Ativos - %d",
+        "showMessage": "Mostrar tudo",
+        "collapseMessage": "Recolher tudo"
+    },
+    "select": {
+        "cells": {
+            "1": "1 célula selecionada",
+            "_": "%d células selecionadas"
+        },
+        "columns": {
+            "1": "1 coluna selecionada",
+            "_": "%d colunas selecionadas"
+        },
+        "rows": {
+            "1": "1 linha selecionada",
+            "_": "%d linhas selecionadas"
+        }
+    },
+    "datetime": {
+        "previous": "Anterior",
+        "next": "Próximo",
+        "hours": "Hora",
+        "minutes": "Minuto",
+        "seconds": "Segundo",
+        "unknown": "-",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "weekdays": [
+            "Dom",
+            "Seg",
+            "Ter",
+            "Qua",
+            "Qui",
+            "Sex",
+            "Sáb"
+        ],
+        "months": [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"
+        ]
+    },
+    "editor": {
+        "close": "Fechar",
+        "create": {
+            "button": "Novo",
+            "title": "Criar nova entrada",
+            "submit": "Criar"
+        },
+        "edit": {
+            "button": "Editar",
+            "title": "Editar entrada",
+            "submit": "Atualizar"
+        },
+        "remove": {
+            "button": "Excluir",
+            "title": "Excluir",
+            "submit": "Excluir",
+            "confirm": {
+                "_": "Tem certeza de que deseja excluir %d linhas?",
+                "1": "Tem certeza de que deseja excluir 1 linha?"
+            }
+        },
+        "error": {
+            "system": "Ocorreu um erro no sistema (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mais informações<\/a>)."
+        },
+        "multi": {
+            "title": "Valores múltiplos",
+            "info": "Os itens selecionados contêm valores diferentes para este campo. Para editar e definir todos os itens com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais.",
+            "restore": "Desfazer alterações",
+            "noMulti": "Este campo pode ser editado individualmente, mas não como parte de um grupo."
+        }
+    },
+    "stateRestore": {
+        "renameTitle": "Renomear estado",
+        "renameLabel": "Novo nome para %s:",
+        "renameButton": "Renomear",
+        "removeTitle": "Remover estado",
+        "removeSubmit": "Remover",
+        "removeJoiner": " e ",
+        "removeError": "Falha ao remover o estado.",
+        "removeConfirm": "Tem certeza de que deseja remover %s?",
+        "emptyStates": "Nenhum estado salvo",
+        "emptyError": "O nome não pode estar vazio.",
+        "duplicateError": "Já existe um estado com esse nome.",
+        "creationModal": {
+            "toggleLabel": "Inclui:",
+            "title": "Criar novo estado",
+            "select": "Selecionar",
+            "searchBuilder": "Construtor de Pesquisa",
+            "search": "Pesquisa",
+            "scroller": "Posição de rolagem",
+            "paging": "Paginação",
+            "order": "Ordenação",
+            "name": "Nome:",
+            "columns": {
+                "visible": "Visibilidade da Coluna",
+                "search": "Pesquisa na Coluna"
+            },
+            "button": "Criar"
+        }
+    }
+}
