@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Types (Open-Source JavaScript Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <style>
+        .calendar_default_event_inner {
+            color: #333;
+            border-radius: 10px;
+        }
+
+    </style>
+
+    <div class="note">
+        You can specify custom event types and define their appearance using the <code>onBeforeEventRender</code> event handler.
+        <br/>
+        Read more about <a href="https://doc.daypilot.org/calendar/event-customization/">event
+        customization</a> [doc.daypilot.org].
+    </div>
+
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        const dp = new DayPilot.Calendar("dp", {
+            startDate: "2022-06-06",
+            viewType: "Week",
+            durationBarVisible: false,
+            onBeforeEventRender: args => {
+
+                args.data.areas = [
+                    {
+                        left: 5,
+                        bottom: 5,
+                        width: 24,
+                        height: 24,
+                        symbol: "../icons/daypilot.svg#checkmark-4",
+                        style: "border-radius: 50%; box-sizing: border-box",
+                        backColor: "#0000007f",
+                        fontColor: "#ffffff",
+                        padding: 4
+                    }
+                ];
+
+
+                switch (args.data.type) {
+                    case "appointment":
+                        args.data.backColor = "#95c97f";
+                        args.data.fontColor = "#ffffff";
+                        args.data.areas[0].symbol = "../icons/daypilot.svg#figure";
+                        break;
+                    case "task":
+                        args.data.backColor = "#6498dc";
+                        args.data.fontColor = "#ffffff";
+                        args.data.areas[0].symbol = "../icons/daypilot.svg#checkmark-4";
+                        break;
+                }
+                args.data.borderColor = "darker";
+
+            }
+        });
+        dp.init();
+
+        const app = {
+            init() {
+                this.loadEvents();
+            },
+            loadEvents() {
+                const events = [
+                    {
+                        start: "2022-06-06T10:00:00",
+                        end: "2022-06-06T13:00:00",
+                        id: "23ef6fcd-e12d-b085-e38a-a4e23d0bb61d",
+                        text: "Task 1",
+                        type: "task"
+                    },
+                    {
+                        start: "2022-06-07T11:00:00",
+                        end: "2022-06-07T14:00:00",
+                        id: "fb62e2dd-267e-ec91-886b-73574d24e25a",
+                        text: "Task 2",
+                        type: "task"
+                    },
+                    {
+                        start: "2022-06-08T10:00:00",
+                        end: "2022-06-08T13:00:00",
+                        id: "29b7a553-d44f-8f2c-11e1-a7d5f62eb123",
+                        text: "Appointment 1",
+                        type: "appointment",
+                    },
+                    {
+                        start: "2022-06-08T14:00:00",
+                        end: "2022-06-08T17:00:00",
+                        id: "ff968cfb-eba1-8dc1-7396-7f0d4f465c8a",
+                        text: "Appointment 2",
+                        type: "appointment",
+                    }
+                ];
+
+                dp.update({events});
+            }
+        };
+        app.init();
+
+
+    </script>
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

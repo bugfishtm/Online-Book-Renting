@@ -1,0 +1,243 @@
+{
+    "emptyTable": "Tabloda veri yok",
+    "info": "_START_ ile _END_ arasındaki _TOTAL_ giriş gösteriliyor",
+    "infoEmpty": "0 ile 0 arasındaki 0 giriş gösteriliyor",
+    "infoFiltered": "(_MAX_ toplam girişten filtrelenmiş)",
+    "infoThousands": ",",
+    "lengthMenu": "_MENU_ giriş göster",
+    "loadingRecords": "Yükleniyor...",
+    "processing": "İşleniyor...",
+    "search": "Ara:",
+    "zeroRecords": "Eşleşen kayıt bulunamadı",
+    "thousands": ",",
+    "paginate": {
+        "first": "İlk",
+        "last": "Son",
+        "next": "Sonraki",
+        "previous": "Önceki"
+    },
+    "aria": {
+        "sortAscending": ": Kolon sıralamasını artan düzende etkinleştir",
+        "sortDescending": ": Kolon sıralamasını azalan düzende etkinleştir"
+    },
+    "autoFill": {
+        "cancel": "İptal",
+        "fill": "Tüm hücreleri <i>%d<\/i> ile doldur",
+        "fillHorizontal": "Hücreleri yatay olarak doldur",
+        "fillVertical": "Hücreleri dikey olarak doldur"
+    },
+    "buttons": {
+        "collection": "Koleksiyon <span class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s'\/>",
+        "colvis": "Kolon Görünürlüğü",
+        "colvisRestore": "Görünürlüğü geri yükle",
+        "copy": "Kopyala",
+        "copyKeys": "Tablo verilerini sistem panonuza kopyalamak için ctrl veya u2318 + C tuşlarına basın.<br><br>İptal etmek için bu mesaja tıklayın veya escape tuşuna basın.",
+        "copySuccess": {
+            "1": "1 satır panoya kopyalandı",
+            "_": "%d satır panoya kopyalandı"
+        },
+        "copyTitle": "Pano'ya Kopyala",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Tüm satırları göster",
+            "_": "%d satır göster"
+        },
+        "pdf": "PDF",
+        "print": "Yazdır",
+        "updateState": "Güncelle",
+        "stateRestore": "%d Durumu",
+        "savedStates": "Kaydedilen Durumlar",
+        "renameState": "Yeniden Adlandır",
+        "removeState": "Kaldır",
+        "removeAllStates": "Tüm Durumları Kaldır",
+        "createState": "Durum Oluştur"
+    },
+    "searchBuilder": {
+        "add": "Koşul Ekle",
+        "button": {
+            "0": "Arama Yapıcı",
+            "_": "Arama Yapıcı (%d)"
+        },
+        "clearAll": "Tümünü Temizle",
+        "condition": "Koşul",
+        "conditions": {
+            "date": {
+                "after": "Sonra",
+                "before": "Önce",
+                "between": "Arasında",
+                "empty": "Boş",
+                "equals": "Eşittir",
+                "not": "Değil",
+                "notBetween": "Arasında Değil",
+                "notEmpty": "Boş Değil"
+            },
+            "number": {
+                "between": "Arasında",
+                "empty": "Boş",
+                "equals": "Eşittir",
+                "gt": "Büyüktür",
+                "gte": "Büyük veya Eşittir",
+                "lt": "Küçüktür",
+                "lte": "Küçük veya Eşittir",
+                "not": "Değil",
+                "notBetween": "Arasında Değil",
+                "notEmpty": "Boş Değil"
+            },
+            "string": {
+                "contains": "İçerir",
+                "empty": "Boş",
+                "endsWith": "Şu İle Biter",
+                "equals": "Eşittir",
+                "not": "Değil",
+                "notEmpty": "Boş Değil",
+                "startsWith": "Şu İle Başlar",
+                "notContains": "İçermez",
+                "notStartsWith": "Şu İle Başlamaz",
+                "notEndsWith": "Şu İle Bitmez"
+            },
+            "array": {
+                "without": "Olmadan",
+                "notEmpty": "Boş Değil",
+                "not": "Değil",
+                "contains": "İçerir",
+                "empty": "Boş",
+                "equals": "Eşittir"
+            }
+        },
+        "data": "Veri",
+        "deleteTitle": "Filtreleme kuralını sil",
+        "leftTitle": "Kriteri Sola Kaydır",
+        "logicAnd": "Ve",
+        "logicOr": "Veya",
+        "rightTitle": "Kriteri Sağa Kaydır",
+        "title": {
+            "0": "Arama Yapıcı",
+            "_": "Arama Yapıcı (%d)"
+        },
+        "value": "Değer"
+    },
+    "searchPanes": {
+        "clearMessage": "Tümünü Temizle",
+        "collapse": {
+            "0": "Arama Panelleri",
+            "_": "Arama Panelleri (%d)"
+        },
+        "count": "{toplam}",
+        "countFiltered": "{gösterilen} ({toplam})",
+        "emptyPanes": "Arama Panelleri Yok",
+        "loadMessage": "Arama Panelleri Yükleniyor",
+        "title": "Aktif Filtreler - %d",
+        "showMessage": "Tümünü Göster",
+        "collapseMessage": "Tümünü Küçült"
+    },
+    "select": {
+        "cells": {
+            "1": "1 hücre seçildi",
+            "_": "%d hücre seçildi"
+        },
+        "columns": {
+            "1": "1 kolon seçildi",
+            "_": "%d kolon seçildi"
+        },
+        "rows": {
+            "1": "1 satır seçildi",
+            "_": "%d satır seçildi"
+        }
+    },
+    "datetime": {
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "hours": "Saat",
+        "minutes": "Dakika",
+        "seconds": "Saniye",
+        "unknown": "-",
+        "amPm": [
+            "ÖÖ",
+            "ÖS"
+        ],
+        "weekdays": [
+            "Pazar",
+            "Pazartesi",
+            "Salı",
+            "Çarşamba",
+            "Perşembe",
+            "Cuma",
+            "Cumartesi"
+        ],
+        "months": [
+            "Ocak",
+            "Şubat",
+            "Mart",
+            "Nisan",
+            "Mayıs",
+            "Haziran",
+            "Temmuz",
+            "Ağustos",
+            "Eylül",
+            "Ekim",
+            "Kasım",
+            "Aralık"
+        ]
+    },
+    "editor": {
+        "close": "Kapat",
+        "create": {
+            "button": "Yeni",
+            "title": "Yeni giriş oluştur",
+            "submit": "Oluştur"
+        },
+        "edit": {
+            "button": "Düzenle",
+            "title": "Girişi Düzenle",
+            "submit": "Güncelle"
+        },
+        "remove": {
+            "button": "Sil",
+            "title": "Sil",
+            "submit": "Sil",
+            "confirm": {
+                "_": "%d satırı silmek istediğinizden emin misiniz?",
+                "1": "1 satırı silmek istediğinizden emin misiniz?"
+            }
+        },
+        "error": {
+            "system": "Bir sistem hatası oluştu (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Daha fazla bilgi<\/a>)."
+        },
+        "multi": {
+            "title": "Birden Fazla Değer",
+            "info": "Seçilen öğeler bu giriş için farklı değerler içeriyor. Tüm öğeleri aynı değere ayarlamak için buraya tıklayın veya dokunun, aksi takdirde bireysel değerlerini korurlar.",
+            "restore": "Değişiklikleri Geri Al",
+            "noMulti": "Bu giriş bireysel olarak düzenlenebilir, ancak grup parçası olamaz."
+        }
+    },
+    "stateRestore": {
+        "renameTitle": "Durum Adını Değiştir",
+        "renameLabel": "%s için yeni ad:",
+        "renameButton": "Yeniden Adlandır",
+        "removeTitle": "Durumu Kaldır",
+        "removeSubmit": "Kaldır",
+        "removeJoiner": " ve ",
+        "removeError": "Durum kaldırılamadı.",
+        "removeConfirm": "%s'yi kaldırmak istediğinizden emin misiniz?",
+        "emptyStates": "Kaydedilmiş durum yok",
+        "emptyError": "Ad boş olamaz.",
+        "duplicateError": "Bu isimde zaten bir durum var.",
+        "creationModal": {
+            "toggleLabel": "İçerir:",
+            "title": "Yeni Durum Oluştur",
+            "select": "Seç",
+            "searchBuilder": "Arama Yapıcı",
+            "search": "Ara",
+            "scroller": "Kaydırma Konumu",
+            "paging": "Sayfalama",
+            "order": "Sıralama",
+            "name": "Ad:",
+            "columns": {
+                "visible": "Kolon Görünürlüğü",
+                "search": "Kolon Arama"
+            },
+            "button": "Oluştur"
+        }
+    }
+}

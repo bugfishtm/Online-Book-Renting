@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Localization (Open-Source JavaScript Monthly Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+	<!-- /head -->
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+<!-- /top -->
+
+<div class="note"><b>Note:</b> Read more about the <a href="https://doc.daypilot.org/month/localization/">monthly event calendar localization</a> [doc.daypilot.org].</div>
+
+
+<div class="tools">Select locale:
+    <select id="locale">
+        <option>ca-es</option>
+        <option>cs-cz</option>
+        <option>da-dk</option>
+        <option>de-at</option>
+        <option>de-ch</option>
+        <option selected="selected">de-de</option>
+        <option>de-lu</option>
+        <option>en-au</option>
+        <option>en-ca</option>
+        <option>en-gb</option>
+        <option>en-us</option>
+        <option>es-es</option>
+        <option>es-mx</option>
+        <option>eu-es</option>
+        <option>fi-fi</option>
+        <option>fr-be</option>
+        <option>fr-ch</option>
+        <option>fr-fr</option>
+        <option>fr-lu</option>
+        <option>gl-es</option>
+        <option>it-it</option>
+        <option>it-ch</option>
+        <option>ja-jp</option>
+        <option>nb-no</option>
+        <option>nl-nl</option>
+        <option>nl-be</option>
+        <option>nn-no</option>
+        <option>pt-br</option>
+        <option>pl-pl</option>
+        <option>pt-pt</option>
+        <option>ru-ru</option>
+        <option>sk-sk</option>
+        <option>sv-se</option>
+        <option>uk-ua</option>
+        <option>zh-cn</option>
+    </select>
+</div>
+
+<div id="dp"></div>
+
+<script type="text/javascript">
+    const dp = new DayPilot.Month("dp");
+
+    dp.locale = "de-de";
+
+    // view
+    dp.startDate = "2021-03-01";
+
+    // event creating
+    dp.onTimeRangeSelected = function (args) {
+        var name = prompt("New event name:", "Event");
+        dp.clearSelection();
+        if (!name) return;
+        var e = new DayPilot.Event({
+            start: args.start,
+            end: args.end,
+            id: DayPilot.guid(),
+            text: name
+        });
+        dp.events.add(e);
+    };
+
+    dp.onEventClicked = function(args) {
+        alert("clicked: " + args.e.id());
+    };
+
+    dp.init();
+
+
+    const app = {
+        elements: {
+            locale: document.querySelector("#locale")
+        },
+        init() {
+            this.addEventHandlers();
+            this.loadEventData();
+        },
+        addEventHandlers() {
+            app.elements.locale.addEventListener("change", function() {
+                const locale = app.elements.locale.value;
+                dp.update({locale});
+            });
+        },
+        loadEventData() {
+            const events = [];
+            for (let i = 0; i < 10; i++) {
+                const duration = Math.floor(Math.random() * 1.2);
+                const start = Math.floor(Math.random() * 6) - 3; // -3 to 3
+
+                events.push({
+                    start: new DayPilot.Date("2021-03-04T00:00:00").addDays(start),
+                    end: new DayPilot.Date("2021-03-04T12:00:00").addDays(start).addDays(duration),
+                    id: DayPilot.guid(),
+                    text: "Event " + i
+                });
+            }
+            dp.update({events});
+        }
+    };
+    app.init();
+
+</script>
+
+
+<!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+
