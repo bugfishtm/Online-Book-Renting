@@ -46,7 +46,39 @@ This project has been created with [Suitefish-CMS](https://github.com/bugfishtm/
 
 ## 🛠️ Installation 
 
+### Setup Guide (Not using Docker)
+
 For installation instructions, please refer to our documentation, which can be found in the "Documentation" section of this README. You can access the instructions online at [https://bugfishtm.github.io/Online-Book-Renting/installation.html](https://bugfishtm.github.io/Online-Book-Renting/installation.html) or locally at [./docs/installation.html](./docs/installation.html).
+
+### Docker Quick Setup
+
+To deploy the Docker image `bugfishtm/obr:latest` using a single command, you can use the following:
+
+```bash
+docker run -d --restart always -p 80:80 -p 443:443 -e sf_db_pass=your_password -e sf_url=your_url -e sf_timezone=Europe/Berlin -v obr_data:/var/www/html/_data -v obr_mysql:/var/lib/mysql bugfishtm/obr:latest
+```
+
+This command does the following:
+
+- Runs the container in detached mode (`-d`)
+- Set the startup policy to start always, so the container will not stop if the system performs a reboot.
+- Maps ports 80 and 443 from the container to the host
+- Sets required environment variables (`-e`)
+- Creates and mounts volumes for persistent data (`-v`)
+- Uses the `bugfishtm/obr:latest` image from Docker Hub
+
+Replace `your_password`, `your_url`, and `your_timezone` with appropriate values. The volumes `obr_data` and `obr_mysql` will be created automatically if they don't exist.
+
+|Variable|Description|
+|-------|-------|
+| sf_db_pass | MySQL root password for database to be created and used. |
+| sf_url | Domain this service is running on. E.g http://localhost or https://localhost |
+| sf_timezone | Timezone you want the service to run at. E.g Europe/Berlin. Use tz identifiers from https://en.wikipedia.org/wiki/List_of_tz_database_time_zones |
+
+### Initial Login
+Initial user account for the website after deployment:  
+username: admin@admin.local  
+password: changeme  
 
 ## 📖 Documentation
 
@@ -56,7 +88,7 @@ The following documentation is intended for both end-users and developers.
 | **Description**                                                       | **Link**                                                                                         |
 |----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | Access the online documentation for this project. | [https://bugfishtm.github.io/Online-Book-Renting/index.html](https://bugfishtm.github.io/Online-Book-Renting/index.html)  |
-| If you'd prefer to access the documentation locally, you can find it at. | [./docs/index.html](./docs/index.html) |
+| If you'd prefer to access the documentation locally, you can find it at. | ./docs/index.html |
 
 The following documentation is intended for developers.
 
