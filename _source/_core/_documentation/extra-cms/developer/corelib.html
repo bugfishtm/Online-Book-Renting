@@ -1,0 +1,1490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../installation.html">
+      
+      
+        <link rel="next" href="folders.html">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Functions - Suitefish CMS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "Suitefish CMS",
+    }
+    </script>
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "TechArticle",
+	  "headline": "Core Library",
+	  "description": "The current page demonstrates the core functionalities of the CMS system, showcasing essential features such as content creation, editing, and organization. It highlights tools for managing digital assets, user roles, and permissions, allowing users to efficiently control and customize the website&#x27;s content. This page serves as a practical overview of how the CMS enables streamlined content management, workflow automation, and publishing capabilities.",
+	  "articleSection": "Introduction",
+	  "datePublished": "2024-08-19",
+	  "dateModified": "2024-08-19",
+	  "author": {
+		"@type": "Person",
+		"name": "Jan-Maurice Dahlmanns"
+	  },
+	  "publisher": {
+		"@type": "Organization",
+		"name": "Bugfish",
+		"logo": {
+		  "@type": "ImageObject",
+		  "url": "../logo.png"
+		}
+	  }
+	}
+	</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="subject" content="documentation">
+	<meta name="copyright" content="bugfish">
+	<meta name="language" content="en">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="bugfish, ynvnzmlzaa@gmail.com">
+	
+	
+	<meta property="og:title" content="Core Library - Suitefish CMS">
+	<meta name="description" content="The current page demonstrates the core functionalities of the CMS system, showcasing essential features such as content creation, editing, and organization. It highlights tools for managing digital assets, user roles, and permissions, allowing users to efficiently control and customize the website&#x27;s content. This page serves as a practical overview of how the CMS enables streamlined content management, workflow automation, and publishing capabilities.">  
+	<meta name="og:description" content="The current page demonstrates the core functionalities of the CMS system, showcasing essential features such as content creation, editing, and organization. It highlights tools for managing digital assets, user roles, and permissions, allowing users to efficiently control and customize the website&#x27;s content. This page serves as a practical overview of how the CMS enables streamlined content management, workflow automation, and publishing capabilities.">  
+	<meta property="og:image" content="../meta.png">
+           
+      
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#core-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Suitefish CMS" class="md-header__button md-logo" aria-label="Suitefish CMS" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Suitefish CMS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bugfishtm/suitefish-cms" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    suitefish-cms
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Suitefish CMS" class="md-nav__button md-logo" aria-label="Suitefish CMS" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Suitefish CMS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bugfishtm/suitefish-cms" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    suitefish-cms
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screenshots.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Screenshots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Core Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="corelib.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extensions-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions Init
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-mail-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Mail Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-include-and-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Include and Read
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-setup-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Setup Get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-setup-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Setup Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Builder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Theme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Downloads
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="folders.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vendor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3rd Party
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modules Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Modules Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-site.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-ext.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extension Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-image.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-software.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-docker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mod-theme.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theme Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bugfishtm.blogspot.com/2023/05/impressum.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Impressum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bugfishtm.blogspot.com/2023/05/privacy.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://bugfishtm.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    More by Bugfish
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#extensions-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions Init
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-mail-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Mail Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-include-and-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Include and Read
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-setup-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Setup Get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-setup-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Setup Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Builder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Theme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Downloads
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="core-library">Core Library</h1>
+<p>Core library functionalities are listed here.</p>
+<h2 id="extensions-init">Extensions Init</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__init_site_header</code></td>
+<td>Get Array with current Site modules Extension in Parameter</td>
+<td>$hive_mode</td>
+</tr>
+<tr>
+<td><code>hive__init_extension_header</code></td>
+<td>Init Variable Set for Extension Module Injections</td>
+<td>$object, $extension_name, $sitemod_name = false</td>
+</tr>
+<tr>
+<td><code>hive__extension_path($hive_mode)</code></td>
+<td>Get Path of all active extensions for a site Module</td>
+<td>$hive_mode = false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="default-mail-function">Default Mail Function</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hive__default_mail</td>
+<td>Default Backend Function to send Mails</td>
+<td>$object, $template, $mail, $user_id, $url_if_needed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-include-and-read">File Include and Read</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__require_once</code></td>
+<td>Require Once Alias</td>
+<td>$object, $filepath</td>
+</tr>
+<tr>
+<td><code>hive__require</code></td>
+<td>Require Alias</td>
+<td>$object, $filepath</td>
+</tr>
+<tr>
+<td><code>hive__require_x</code></td>
+<td>Include $FILEPATH./version.php and return $x array</td>
+<td>$filepath</td>
+</tr>
+</tbody>
+</table>
+<h2 id="status-check">Status Check</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__is_main</code></td>
+<td>Checks if the current Viewed Site Module mode is the Administrator Page (Main Site) - True if yes, False if no.</td>
+<td>$object</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-status">Access Status</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__access($object, $rights, $displayerror = false)</code></td>
+<td>Checks access rights for a user with optional groups and can display an error page.</td>
+<td>- <code>$object</code> - An object that contains information about permissions.<br>- <code>$rights</code> - An array of access rights to check.<br>- <code>$displayerror</code> - A boolean indicating whether to display an error page on access denial.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="user-setup-get">User Setup Get</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__user_lang_get($object, $user_id, $mode)</code></td>
+<td>Get the current userdata lang.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$mode</code> - Site Mode to get value for</td>
+</tr>
+<tr>
+<td><code>hive__user_theme_get($object, $user_id, $mode)</code></td>
+<td>Get the current userdata theme.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$mode</code> - Site Mode to get value for</td>
+</tr>
+<tr>
+<td><code>hive__user_theme_sub_get($object, $user_id, $mode)</code></td>
+<td>Get the current userdata theme sub.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$mode</code> - Site Mode to get value for</td>
+</tr>
+<tr>
+<td><code>hive__user_color_get($object, $user_id, $mode)</code></td>
+<td>Get the current userdata color.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$mode</code> - Site Mode to get value for</td>
+</tr>
+<tr>
+<td><code>hive__user_key_get($object, $user_id, $mode, $key)</code></td>
+<td>Get a key value from user data.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$mode</code> - Site Mode to get value for<br>- <code>$key</code> - Key to get value for</td>
+</tr>
+</tbody>
+</table>
+<h2 id="user-setup-change">User Setup Change</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__user_lang_set($object, $user_id, $hive_mode, $lang_name)</code></td>
+<td>Save a default language for the user in the given site mode in the users' database (will be validated with the available language array).</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$hive_mode</code> - Site Mode to change for<br>- <code>$lang_name</code> - Change the language for this user in this site mode to this value</td>
+</tr>
+<tr>
+<td><code>hive__user_theme_set($object, $user_id, $hive_mode, $theme_name)</code></td>
+<td>Save a default theme for the user in the given site mode in the users' database (will be validated with the available themes array).</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$hive_mode</code> - Site Mode to change for<br>- <code>$theme_name</code> - Change the theme for this user in this site mode to this value</td>
+</tr>
+<tr>
+<td><code>hive__user_theme_sub_set($object, $user_id, $hive_mode, $theme_subsettings)</code></td>
+<td>Save theme subsettings if required for the user in the given site mode in the users' database.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$hive_mode</code> - Site Mode to change for<br>- <code>$theme_subsettings</code> - Change Theme Subsettings to this value</td>
+</tr>
+<tr>
+<td><code>hive__user_color_set($object, $user_id, $hive_mode, $color_code)</code></td>
+<td>Save a default color for the user in the given site mode in the users' database.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$hive_mode</code> - Site Mode to change for<br>- <code>$color_code</code> - Change color for this user in this site mode to this value</td>
+</tr>
+<tr>
+<td><code>hive__user_key_set($object, $user_id, $mode, $key, $value)</code></td>
+<td>Save a default key value for the user in the given site mode in the users' database.</td>
+<td>- <code>$object</code> - Object Array<br>- <code>$user_id</code> - User ID to change for<br>- <code>$hive_mode</code> - Site Mode to change for<br>- <code>$key</code> - Variable Key to save value under<br> - <code>$value</code> - Value for Variable Key</td>
+</tr>
+</tbody>
+</table>
+<h2 id="filtering">Filtering</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__hsc</code></td>
+<td>Alias for htmlspecialchars</td>
+<td>$value</td>
+</tr>
+<tr>
+<td><code>hive__trim</code></td>
+<td>Alias for trim</td>
+<td>$value</td>
+</tr>
+<tr>
+<td><code>hive__hen</code></td>
+<td>Alias for htmlentities</td>
+<td>$value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="folders">Folders</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__folder_create</code></td>
+<td>Create a folder with htaccess or forwarding file if necessary.</td>
+<td><code>$folderpath</code>, <code>$forwardfile = false</code>, <code>$denie_access = false</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="url-builder">URL Builder</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__url($array)</code></td>
+<td>Generates a relative URL based on an array of values.</td>
+<td><code>$array</code> - An array of values used to construct the URL.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="error-page">Error Page</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__error($title, $subtitle, $description, $exit, $code)</code></td>
+<td>Generates an HTML error page with custom information.</td>
+<td>- <code>$title</code> - The title of the error page.<br>- <code>$subtitle</code> - A subtitle for the error.<br>- <code>$description</code> - A description of the error.<br>- <code>$exit</code> - A boolean indicating whether to exit after displaying the error.<br>- <code>$code</code> - An optional HTTP response code (numeric).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="templates">Templates</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Login and Account Execution Functions</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>hive__template_mail_activate</code></td>
+<td>Execution to activate new mail.</td>
+<td><code>$object</code>, <code>$get_token = "mai_token"</code>, <code>$get_user = "mai_user"</code>, <code>$message = true</code>, <code>$redirect = _HIVE_URL_REL_</code></td>
+</tr>
+<tr>
+<td><code>hive__template_user_activate</code></td>
+<td>Execution to activate a user.</td>
+<td><code>$object</code>, <code>$get_token = "act_token"</code>, <code>$get_user = "act_user"</code>, <code>$message = true</code>, <code>$redirect = _HIVE_URL_REL_</code></td>
+</tr>
+<tr>
+<td><code>hive__template_recover_request</code></td>
+<td>Request a new Recover of Account and Send Mail to Account.</td>
+<td><code>$object</code>, <code>$rec_url = false</code>, <code>$get_token = "rec_token"</code>, <code>$get_user = "rec_user"</code>, <code>$message = true</code>, <code>$redirect = _HIVE_URL_REL_</code></td>
+</tr>
+<tr>
+<td><code>hive__template_login</code></td>
+<td>Login Executions.</td>
+<td><code>$object</code>, <code>$cookies_allow = false</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="backend-theme">Backend Theme</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hive__default_volt_footer($object, $footer, $classes, $end_div)</td>
+<td>Footer for Default Style</td>
+<td></td>
+</tr>
+<tr>
+<td>hive__default_volt_header($object, $title, $metaext, $theme, $mainclass, $defaultclasses)</td>
+<td>Header for Default Style</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="downloads">Downloads</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hive__download_mimeTypes()</code></td>
+<td>Ger array with Valid Mime Types</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hive__download($filePath)</code></td>
+<td>Download all files even if restricted with required filepath (absolute)</td>
+<td>$filePath</td>
+</tr>
+</tbody>
+</table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

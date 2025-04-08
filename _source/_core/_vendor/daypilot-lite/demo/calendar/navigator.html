@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigator (Open-Source JavaScript Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+    <div class="note"><b>Note:</b> Read more about integrating the <a
+        href="https://doc.daypilot.org/calendar/navigator/">date navigator</a> [doc.daypilot.org].
+    </div>
+
+    <div style="display: flex;">
+
+        <div style="margin-right: 10px;">
+            <div id="nav"></div>
+        </div>
+        <div style="flex-grow: 1;">
+            <div id="dp"></div>
+        </div>
+    </div>
+
+    <div id="print"></div>
+
+    <script type="text/javascript">
+        const datepicker = new DayPilot.Navigator("nav", {
+            showMonths: 3,
+            selectMode: "Week",
+            freeHandSelectionEnabled: true,
+            onTimeRangeSelected: (args) => {
+                calendar.update({
+                    startDate: args.start
+                });
+            }
+        });
+        datepicker.init();
+
+        const calendar = new DayPilot.Calendar("dp", {
+            viewType: "Week",
+            onTimeRangeSelected: async (args) => {
+                const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+                calendar.clearSelection();
+                if (modal.canceled) {
+                    return;
+                }
+                calendar.events.add({
+                    start: args.start,
+                    end: args.end,
+                    id: DayPilot.guid(),
+                    text: modal.result
+                });
+            },
+            onEventClick: (args) => {
+                DayPilot.Modal.alert("clicked: " + args.e.id());
+            }
+        });
+        calendar.init();
+
+        const app = {
+            init() {
+                this.loadEvents();
+            },
+            loadEvents() {
+                const events = [
+                    {start: DayPilot.Date.today().addHours(10), end: DayPilot.Date.today().addHours(12), id: DayPilot.guid(), text: "Event 1"},
+                    {start: DayPilot.Date.today().addHours(14), end: DayPilot.Date.today().addHours(16), id: DayPilot.guid(), text: "Event 2"},
+                    {start: DayPilot.Date.today().addHours(18), end: DayPilot.Date.today().addHours(20), id: DayPilot.guid(), text: "Event 3"}
+                ];
+                calendar.update({events});
+            }
+        };
+        app.init();
+
+    </script>
+
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+
