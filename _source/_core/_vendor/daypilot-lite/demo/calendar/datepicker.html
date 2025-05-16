@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Picker (Open-Source JavaScript Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <div class="tools">
+        <a href="#" id="start">Change</a>
+    </div>
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        const picker = new DayPilot.DatePicker({
+            target: 'start',
+            pattern: 'M/d/yyyy',
+            onTimeRangeSelected: function (args) {
+                dp.startDate = args.start;
+                dp.update();
+            }
+        });
+
+        const dp = new DayPilot.Calendar("dp", {
+            onTimeRangeSelected: async (args) => {
+                const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+                if (modal.canceled) {
+                    return;
+                }
+                const name = modal.result;
+                dp.events.add({
+                    start: args.start,
+                    end: args.end,
+                    id: DayPilot.guid(),
+                    text: name
+                });
+                dp.clearSelection();
+            },
+            onEventClicked: (args) => {
+                DayPilot.Modal.alert("clicked: " + args.e.id());
+            }
+        });
+        dp.init();
+
+
+        const app = {
+            elements: {
+                start: document.getElementById('start')
+            },
+            init() {
+                this.addEventHandlers();
+                this.loadEventData();
+            },
+            addEventHandlers() {
+                this.elements.start.addEventListener('click', (ev) => {
+                    ev.preventDefault();
+                    picker.show();
+                });
+            },
+            loadEventData() {
+                const events = [
+                    {
+                        start: DayPilot.Date.today().addHours(12),
+                        end: DayPilot.Date.today().addHours(15),
+                        id: DayPilot.guid(),
+                        text: "Special event"
+                    }
+                ];
+                dp.update({events});
+            }
+        };
+        app.init();
+
+    </script>
+
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+
