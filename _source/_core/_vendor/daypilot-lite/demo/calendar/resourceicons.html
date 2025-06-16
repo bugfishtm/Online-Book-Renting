@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Resource Header Customization (Open-Source Resource Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <div class="note">
+        The resource header displays an "edit" icon using an active area added in the <code>onBeforeHeaderRender</code> event handler.
+        <br/>
+        Read more about <a href="https://doc.daypilot.org/calendar/column-header-active-areas/">column header active areas</a> [doc.daypilot.org].
+    </div>
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        const dp = new DayPilot.Calendar("dp", {
+            startDate: "2022-06-24",
+            viewType: "Resources",
+            columns: [
+                {name: "Room A", id: "A"},
+                {name: "Room B", id: "B"},
+                {name: "Room C", id: "C"},
+                {name: "Room D", id: "D"},
+            ],
+            headerHeight: 40,
+            onTimeRangeSelected: async (args) => {
+                const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+                dp.clearSelection();
+                if (modal.canceled) {
+                    return;
+                }
+                const name = modal.result;
+                dp.events.add({
+                    start: args.start,
+                    end: args.end,
+                    resource: args.resource,
+                    id: DayPilot.guid(),
+                    text: name
+                });
+            },
+            onBeforeHeaderRender: args => {
+                args.header.areas = [
+                    {
+                        right: "5",
+                        top: 5,
+                        width: 30,
+                        height: 30,
+                        fontColor: "#999999",
+                        symbol: "../icons/daypilot.svg#edit",
+                        padding: 3,
+                        cssClass: "icon",
+                        toolTip: "Edit...",
+                        onClick: async args => {
+                            const form = [
+                                {name: "Name", id: "name"},
+                            ];
+                            const data = args.source.data;
+                            console.log(data);
+                            const modal = await DayPilot.Modal.form(form, data);
+                            if (modal.canceled) {
+                                return;
+                            }
+                            const name = modal.result.name;
+                            args.source.data.name = name;
+                            dp.update();
+                        }
+                    }
+                ];
+            }
+        });
+        dp.init();
+
+        const app = {
+            loadEventData() {
+                const events = [
+                    {
+                        start: "2022-06-24T12:00:00",
+                        end: "2022-06-24T15:00:00",
+                        resource: "B",
+                        id: DayPilot.guid(),
+                        text: "Room reservation"
+                    }
+                ];
+                dp.update({events});
+            },
+            init() {
+                this.loadEventData();
+            }
+        };
+        app.init();
+
+    </script>
+
+    <style>
+        .icon {
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 3px solid #cccccc;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            border-color: #3c78d8;
+        }
+    </style>
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

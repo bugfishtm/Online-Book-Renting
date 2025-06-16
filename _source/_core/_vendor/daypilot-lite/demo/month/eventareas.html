@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Active Areas (Open-Source JavaScript Monthly Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <div class="note"><b>Note:</b> Event active areas  can be
+        used to display custom action buttons, drag handles, icons, and other objects. Read more about the <a
+        href="https://doc.daypilot.org/month/event-active-areas/">event active areas</a> [doc.daypilot.org]
+    </div>
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        const dp = new DayPilot.Month("dp", {
+            startDate: "2023-10-01",
+            onTimeRangeSelected: async (args) => {
+                const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+                dp.clearSelection();
+                if (modal.canceled) {
+                    return;
+                }
+                const text = modal.result;
+                dp.events.add({
+                    start: args.start,
+                    end: args.end,
+                    id: DayPilot.guid(),
+                    resource: args.resource,
+                    text: text
+                });
+            },
+            contextMenu: new DayPilot.Menu({
+                items: [
+                    {
+                        text: "Details...",
+                        onClick: (args) => {
+                            const e = args.source;
+                            DayPilot.Modal.alert("Event details for: " + e.data.text);
+                        }
+                    },
+                    {
+                        text: "-"
+                    },
+                    {
+                        text: "Delete",
+                        onClick: (args) => {
+                            const e = args.source;
+                            dp.events.remove(e);
+                        }
+                    },
+                ]
+            }),
+            onBeforeEventRender: args => {
+                args.data.areas = [
+                    {
+                        onClick: (args) => {
+                            const e = args.source;
+                            DayPilot.Modal.alert("Event details for: " + e.data.text);
+                        },
+                        height: 20,
+                        width: 20,
+                        top: 2,
+                        right: 23,
+                        cssClass: "area-icon",
+                        symbol: "../icons/daypilot.svg#i-circle"
+                    },
+                    {
+                        height: 20,
+                        width: 20,
+                        top: 2,
+                        right: 2,
+                        cssClass: "area-icon",
+                        symbol: "../icons/daypilot.svg#minichevron-down-4",
+                        action: "ContextMenu"
+                    },
+                ];
+
+            }
+        });
+        dp.init();
+
+        const events = [
+            {
+                start: "2023-10-10T00:00:00",
+                end: "2023-10-11T00:00:00",
+                id: 1,
+                text: "Appointment",
+            }
+
+        ];
+        dp.update({events});
+
+    </script>
+
+    <style>
+        .area-icon {
+            opacity: 0.5;
+        }
+        .area-icon:hover {
+            opacity: 1;
+        }
+    </style>
+
+
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+language: node_js
+
+node_js:
+  - "7"
+  - "8"
+  - "10"
+
+dist: trusty
+sudo: false
+
+branches:
+  only:
+    - master
+    - develop
+
+cache:
+  directories:
+    - node_modules
+  yarn: true
+
+install:
+  - nvm install --lts
+
+before_script:
+#  - npm install
+  - yarn install
+
+script:
+#  - npx gulp prod
+#  - npm run gulp prod
+  - yarn run gulp prod
+#  - npm test
+
+# deploy:
+#   provider: script
+#   script: bash ./bin/deploy.sh
+#   skip_cleanup: true
+#   on:
+#     branch: master
+#     node_js:
+#       - "7"
+
+env:
+  global:
+    - secure: "c527cd6b11db8ba1ebea17e7285a739f0e9b6136"

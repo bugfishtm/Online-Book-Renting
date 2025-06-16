@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Customization (Open-Source JavaScript Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <style>
+        .calendar_default_event {
+            border-radius: 10px;
+        }
+        .calendar_default_event_inner {
+            color: #333;
+            border-radius: 10px;
+            padding-top: 30px;
+        }
+
+    </style>
+
+    <div class="note">
+        You can customize the event appearance (text/HTML, background and font color, CSS class, duration bar...) using the <code>onBeforeEventRender</code> event handler.
+        <br/>
+        Read more about <a href="https://doc.daypilot.org/calendar/event-customization/">event customization</a> [doc.daypilot.org].
+    </div>
+
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        var dp = new DayPilot.Calendar("dp");
+
+        // view
+        dp.startDate = "2022-06-06";
+        dp.viewType = "Week";
+        dp.durationBarVisible = false;
+
+        dp.events.list = [
+            {
+                "start": "2022-06-06T10:00:00",
+                "end": "2022-06-06T13:00:00",
+                "id": "23ef6fcd-e12d-b085-e38a-a4e23d0bb61d",
+                "text": "Event 1",
+                "backColor": "#FFE599",
+                "borderColor": "#F1C232"
+            },
+            {
+                "start": "2022-06-07T11:00:00",
+                "end": "2022-06-07T14:00:00",
+                "id": "fb62e2dd-267e-ec91-886b-73574d24e25a",
+                "text": "Event 2",
+                "backColor": "#9FC5E8",
+                "borderColor": "#3D85C6"
+            },
+            {
+                "start": "2022-06-08T10:00:00",
+                "end": "2022-06-08T13:00:00",
+                "id": "29b7a553-d44f-8f2c-11e1-a7d5f62eb123",
+                "text": "Event 3",
+                "backColor": "#B6D7A8",
+                "borderColor": "#6AA84F"
+            },
+            {
+                "start": "2022-06-08T14:00:00",
+                "end": "2022-06-08T17:00:00",
+                "id": "ff968cfb-eba1-8dc1-7396-7f0d4f465c8a",
+                "text": "Event 4",
+                "backColor": "#EA9999",
+                "borderColor": "#CC0000",
+                "tags": {
+                    "type": "important"
+                }
+            }
+        ];
+
+        dp.onBeforeEventRender = function (args) {
+            args.data.areas = [
+                {
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    text: args.data.text,
+                    backColor: args.data.borderColor,
+                    fontColor: "#ffffff",
+                    padding: 4,
+                    horizontalAlignment: "center"
+                }
+            ];
+
+            args.data.text = "Event details";
+        };
+
+        dp.init();
+
+
+    </script>
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Resource Header Customization (Open-Source Resource Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <div class="note">
+        The column headers display an image representing the corresponding resource. The images are defined in the <code>columns</code> array and they are added to the header using an active area added in the <code>onBeforeHeaderRender</code> event handler.
+        <br/>
+        Read more about <a href="https://doc.daypilot.org/calendar/column-header-active-areas/">column header active areas</a> [doc.daypilot.org].
+    </div>
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        const dp = new DayPilot.Calendar("dp", {
+            startDate: "2024-04-01",
+            viewType: "Resources",
+            columns: [
+                {name: "Room A", id: "A", image: "../helpers/img/pat-yellow.jpg"},
+                {name: "Room B", id: "B", image: "../helpers/img/pat-blue.jpg"},
+                {name: "Room C", id: "C", image: "../helpers/img/pat-orange.jpg"},
+                {name: "Room D", id: "D", image: "../helpers/img/pat-red.jpg"},
+            ],
+            headerHeight: 90,
+            onTimeRangeSelected: async (args) => {
+                const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+                dp.clearSelection();
+                if (modal.canceled) {
+                    return;
+                }
+                const name = modal.result;
+                dp.events.add({
+                    start: args.start,
+                    end: args.end,
+                    resource: args.resource,
+                    id: DayPilot.guid(),
+                    text: name
+                });
+            },
+            onBeforeHeaderRender: args => {
+                args.header.verticalAlignment = "top";
+                args.header.areas = [
+                    {
+                        left: "calc(50% - 30px)",
+                        bottom: 5,
+                        width: 60,
+                        height: 60,
+                        fontColor: "#999999",
+                        image: args.column.data.image,
+                        style: "box-sizing: border-box; border-radius: 50%; border: 3px solid #ffffff; overflow: hidden;",
+                    }
+                ];
+            }
+        });
+        dp.init();
+
+        const app = {
+            init() {
+                this.loadEvents();
+            },
+            loadEvents() {
+                const events = [
+                    {
+                        start: "2024-04-01T11:00:00",
+                        end: "2024-04-01T14:00:00",
+                        id: 1,
+                        resource: "A",
+                        text: "Event 1",
+                        barColor: "#3c78d8"
+                    },
+                    {
+                        start: "2024-04-01T12:00:00",
+                        end: "2024-04-01T15:00:00",
+                        id: 2,
+                        resource: "B",
+                        text: "Event 2",
+                        barColor: "#6aa84f"
+                    },
+                    {
+                        start: "2024-04-01T10:00:00",
+                        end: "2024-04-01T15:00:00",
+                        id: 3,
+                        resource: "C",
+                        text: "Event 3",
+                        barColor: "#f1c232"
+                    },
+                    {
+                        start: "2024-04-01T12:00:00",
+                        end: "2024-04-01T16:00:00",
+                        id: 4,
+                        resource: "D",
+                        text: "Event 4",
+                        barColor: "#cc0000"
+                    },
+                ];
+                dp.update({events});
+            }
+        };
+        app.init();
+
+    </script>
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

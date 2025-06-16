@@ -1,0 +1,243 @@
+{
+    "emptyTable": "테이블에 데이터가 없습니다",
+    "info": "_START_ 에서 _END_ 까지 총 _TOTAL_ 항목",
+    "infoEmpty": "0에서 0까지 0 항목 표시",
+    "infoFiltered": "(_MAX_ 총 항목에서 필터링됨)",
+    "infoThousands": ",",
+    "lengthMenu": "항목 _MENU_ 개 표시",
+    "loadingRecords": "로딩 중...",
+    "processing": "처리 중...",
+    "search": "검색:",
+    "zeroRecords": "일치하는 레코드가 없습니다",
+    "thousands": ",",
+    "paginate": {
+        "first": "첫 번째",
+        "last": "마지막",
+        "next": "다음",
+        "previous": "이전"
+    },
+    "aria": {
+        "sortAscending": ": 열을 오름차순으로 정렬하려면 활성화하십시오",
+        "sortDescending": ": 열을 내림차순으로 정렬하려면 활성화하십시오"
+    },
+    "autoFill": {
+        "cancel": "취소",
+        "fill": "<i>%d<\/i>로 모든 셀 채우기",
+        "fillHorizontal": "수평으로 셀 채우기",
+        "fillVertical": "수직으로 셀 채우기"
+    },
+    "buttons": {
+        "collection": "컬렉션 <span class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s'\/>",
+        "colvis": "열 표시",
+        "colvisRestore": "표시 복원",
+        "copy": "복사",
+        "copyKeys": "표 데이터를 시스템 클립보드에 복사하려면 ctrl 또는 u2318 + C를 누르세요.<br><br>취소하려면 이 메시지를 클릭하거나 escape 키를 누르세요.",
+        "copySuccess": {
+            "1": "1개의 행을 클립보드에 복사했습니다",
+            "_": "%d개의 행을 클립보드에 복사했습니다"
+        },
+        "copyTitle": "클립보드에 복사",
+        "csv": "CSV",
+        "excel": "엑셀",
+        "pageLength": {
+            "-1": "모든 행 표시",
+            "_": "%d 행 표시"
+        },
+        "pdf": "PDF",
+        "print": "인쇄",
+        "updateState": "업데이트",
+        "stateRestore": "상태 %d",
+        "savedStates": "저장된 상태",
+        "renameState": "이름 변경",
+        "removeState": "제거",
+        "removeAllStates": "모든 상태 제거",
+        "createState": "상태 생성"
+    },
+    "searchBuilder": {
+        "add": "조건 추가",
+        "button": {
+            "0": "검색 빌더",
+            "_": "검색 빌더 (%d)"
+        },
+        "clearAll": "모두 지우기",
+        "condition": "조건",
+        "conditions": {
+            "date": {
+                "after": "이후",
+                "before": "이전",
+                "between": "사이",
+                "empty": "비어 있음",
+                "equals": "같음",
+                "not": "아님",
+                "notBetween": "사이 아님",
+                "notEmpty": "비어 있지 않음"
+            },
+            "number": {
+                "between": "사이",
+                "empty": "비어 있음",
+                "equals": "같음",
+                "gt": "보다 큼",
+                "gte": "이상",
+                "lt": "보다 작음",
+                "lte": "이하",
+                "not": "아님",
+                "notBetween": "사이 아님",
+                "notEmpty": "비어 있지 않음"
+            },
+            "string": {
+                "contains": "포함됨",
+                "empty": "비어 있음",
+                "endsWith": "끝남",
+                "equals": "같음",
+                "not": "아님",
+                "notEmpty": "비어 있지 않음",
+                "startsWith": "시작됨",
+                "notContains": "포함되지 않음",
+                "notStartsWith": "시작되지 않음",
+                "notEndsWith": "끝나지 않음"
+            },
+            "array": {
+                "without": "없음",
+                "notEmpty": "비어 있지 않음",
+                "not": "아님",
+                "contains": "포함됨",
+                "empty": "비어 있음",
+                "equals": "같음"
+            }
+        },
+        "data": "데이터",
+        "deleteTitle": "필터링 규칙 삭제",
+        "leftTitle": "기준 내어놓기",
+        "logicAnd": "그리고",
+        "logicOr": "또는",
+        "rightTitle": "기준 들여놓기",
+        "title": {
+            "0": "검색 빌더",
+            "_": "검색 빌더 (%d)"
+        },
+        "value": "값"
+    },
+    "searchPanes": {
+        "clearMessage": "모두 지우기",
+        "collapse": {
+            "0": "검색 패널",
+            "_": "검색 패널 (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "검색 패널 없음",
+        "loadMessage": "검색 패널 로딩 중",
+        "title": "활성 필터 - %d",
+        "showMessage": "모두 보기",
+        "collapseMessage": "모두 축소"
+    },
+    "select": {
+        "cells": {
+            "1": "1개 셀 선택됨",
+            "_": "%d개 셀 선택됨"
+        },
+        "columns": {
+            "1": "1개 열 선택됨",
+            "_": "%d개 열 선택됨"
+        },
+        "rows": {
+            "1": "1개 행 선택됨",
+            "_": "%d개 행 선택됨"
+        }
+    },
+    "datetime": {
+        "previous": "이전",
+        "next": "다음",
+        "hours": "시간",
+        "minutes": "분",
+        "seconds": "초",
+        "unknown": "-",
+        "amPm": [
+            "오전",
+            "오후"
+        ],
+        "weekdays": [
+            "일",
+            "월",
+            "화",
+            "수",
+            "목",
+            "금",
+            "토"
+        ],
+        "months": [
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월"
+        ]
+    },
+    "editor": {
+        "close": "닫기",
+        "create": {
+            "button": "새로 만들기",
+            "title": "새 항목 만들기",
+            "submit": "만들기"
+        },
+        "edit": {
+            "button": "편집",
+            "title": "항목 편집",
+            "submit": "업데이트"
+        },
+        "remove": {
+            "button": "삭제",
+            "title": "삭제",
+            "submit": "삭제",
+            "confirm": {
+                "_": "%d개의 행을 삭제하시겠습니까?",
+                "1": "1개의 행을 삭제하시겠습니까?"
+            }
+        },
+        "error": {
+            "system": "시스템 오류가 발생했습니다 (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">자세히 보기<\/a>)."
+        },
+        "multi": {
+            "title": "여러 값",
+            "info": "선택된 항목은 이 입력에 대해 다른 값을 포함하고 있습니다. 모든 항목을 동일한 값으로 설정하려면 클릭하거나 탭하세요. 그렇지 않으면 각 항목의 개별 값이 유지됩니다.",
+            "restore": "변경 취소",
+            "noMulti": "이 입력은 개별적으로 편집할 수 있지만 그룹의 일부로는 편집할 수 없습니다."
+        }
+    },
+    "stateRestore": {
+        "renameTitle": "상태 이름 변경",
+        "renameLabel": "%s의 새 이름:",
+        "renameButton": "이름 변경",
+        "removeTitle": "상태 제거",
+        "removeSubmit": "제거",
+        "removeJoiner": " 그리고 ",
+        "removeError": "상태 제거 실패.",
+        "removeConfirm": "%s를 제거하시겠습니까?",
+        "emptyStates": "저장된 상태 없음",
+        "emptyError": "이름을 비워둘 수 없습니다.",
+        "duplicateError": "이 이름으로 이미 상태가 존재합니다.",
+        "creationModal": {
+            "toggleLabel": "포함:",
+            "title": "새 상태 만들기",
+            "select": "선택",
+            "searchBuilder": "검색 빌더",
+            "search": "검색",
+            "scroller": "스크롤 위치",
+            "paging": "페이지 네비게이션",
+            "order": "정렬",
+            "name": "이름:",
+            "columns": {
+                "visible": "열 표시",
+                "search": "열 검색"
+            },
+            "button": "생성"
+        }
+    }
+}

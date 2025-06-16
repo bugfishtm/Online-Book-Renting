@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Text in Cells (Open-Source JavaScript Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <style>
+        .unavailable .calendar_default_cell_inner {
+            background-color: #f8f8f8;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+
+    <div class="note"><b>Note:</b>
+        This demo uses the <a href="https://api.daypilot.org/daypilot-calendar-onbeforecellrender/">onBeforeCellRender</a> event to add "Unavailable" text to the selected day and add a custom CSS class to the cells.
+
+        Read more about Calendar <a href="https://doc.daypilot.org/calendar/cell-customization/">cell customization</a>.
+    </div>
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        const dp = new DayPilot.Calendar("dp", {
+            viewType: "Week",
+            startDate: DayPilot.Date.today(),
+            // headerDateFormat: "dddd",
+            onTimeRangeSelected: async args => {
+
+                const form = [
+                    {name: "Name", id: "text"}
+                ];
+
+                const data = {
+                    text: "Event"
+                };
+
+                const modal = await DayPilot.Modal.form(form, data);
+
+                dp.clearSelection();
+
+                if (modal.canceled) {
+                    return;
+                }
+
+                dp.events.add({
+                    start: args.start,
+                    end: args.end,
+                    id: DayPilot.guid(),
+                    text: modal.result.text,
+                    barColor: "#3c78d8"
+                });
+            },
+            onBeforeCellRender: args => {
+                // mark the selected day as unavailable, add a custom CSS class
+                if (args.cell.start.getDatePart() === DayPilot.Date.today()) {
+                    args.cell.properties.cssClass = "unavailable";
+                    args.cell.properties.html = "Unavailable";
+                }
+            }
+        });
+        dp.init();
+
+        const app = {
+            init() {
+                this.loadEvents();
+            },
+            loadEvents() {
+                const events = [
+                ];
+                dp.update({events});
+            }
+        };
+        app.init();
+
+
+    </script>
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

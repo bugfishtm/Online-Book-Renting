@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Active Areas (Open-Source JavaScript Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <div class="note"><b>Note:</b> Event active areas  can be
+        used to display custom action buttons, drag handles, icons, and other objects. Read more about the <a
+        href="https://doc.daypilot.org/calendar/event-active-areas/">event active areas</a> [doc.daypilot.org]
+    </div>
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+        const dp = new DayPilot.Calendar("dp", {
+            startDate: "2023-10-21",
+            viewType: "Week",
+            onTimeRangeSelected: async (args) => {
+                const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+                dp.clearSelection();
+                if (modal.canceled) {
+                    return;
+                }
+                const text = modal.result;
+                dp.events.add({
+                    start: args.start,
+                    end: args.end,
+                    id: DayPilot.guid(),
+                    resource: args.resource,
+                    text: text
+                });
+            },
+            contextMenu: new DayPilot.Menu({
+                items: [
+                    {
+                        text: "Details...",
+                        onClick: (args) => {
+                            const e = args.source;
+                            DayPilot.Modal.alert("Event details for: " + e.data.text);
+                        }
+                    },
+                    {
+                        text: "-"
+                    },
+                    {
+                        text: "Delete",
+                        onClick: (args) => {
+                            const e = args.source;
+                            dp.events.remove(e);
+                        }
+                    },
+                ]
+            }),
+            onBeforeEventRender: args => {
+                args.data.barHidden = true;
+                args.data.backColor = "#85b270";
+                args.data.borderColor = "darker";
+                args.data.fontColor = "#ffffff";
+                args.data.areas = [
+                    {
+                        onClick: (args) => {
+                            const e = args.source;
+                            DayPilot.Modal.alert("Event details for: " + e.data.text);
+                        },
+                        height: 24,
+                        width: 24,
+                        top: 5,
+                        right: 32,
+                        cssClass: "area-icon",
+                        symbol: "../icons/daypilot.svg#x-2",
+                        toolTip: "Delete"
+                    },
+                    {
+                        height: 24,
+                        width: 24,
+                        top: 5,
+                        right: 5,
+                        cssClass: "area-icon",
+                        symbol: "../icons/daypilot.svg#hamburger-menu",
+                        action: "ContextMenu",
+                        toolTip: "Menu"
+                    },
+                    {
+                        left: 5,
+                        right: 5,
+                        bottom: 5,
+                        height: 25,
+                        backColor: "#444444",
+                        fontColor: "#ffffff",
+                        style: "border-radius: 15px; white-space: nowrap; overflow: hidden;",
+                        padding: 6,
+                        text: "Status: In progress",
+                        verticalAlignment: "center",
+                        horizontalAlignment: "center"
+                    }
+                ];
+            }
+        });
+        dp.init();
+
+        const events = [
+            {
+                start: "2023-10-17T12:00:00",
+                end: "2023-10-17T15:00:00",
+                id: 1,
+                text: "Task",
+            }
+
+        ];
+        dp.update({events});
+
+    </script>
+
+    <style>
+        .calendar_default_event_inner {
+            border-radius: 15px;
+        }
+        .area-icon {
+            /*opacity: 0.5;*/
+            color: #ffffff;
+            background-color: #333333aa;
+            border-radius: 50%;
+            padding: 2px;
+            box-sizing: border-box;
+        }
+        .area-icon:hover {
+            /*opacity: 1;*/
+            background-color: #333333ff;
+        }
+    </style>
+
+
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

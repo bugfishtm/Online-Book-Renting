@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Next/Previous (Open-Source JavaScript Monthly Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+	<!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+<!-- /top -->
+<div class="note"><b>Note:</b> Read more about the <a href="https://doc.daypilot.org/month/next-and-previous-buttons/">next/previous buttons</a> [doc.daypilot.org].</div>
+
+<div class="tools">
+    <a href="#" id="previous">Previous</a>
+    <a href="#" id="next">Next</a>
+</div>
+
+<div id="dp"></div>
+
+<script type="text/javascript">
+    const dp = new DayPilot.Month("dp", {
+        startDate: new DayPilot.Date("2021-03-01"),
+        onTimeRangeSelected: async function (args) {
+            const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+            dp.clearSelection();
+            if (modal.canceled) {
+                return;
+            }
+            const name = modal.result;
+            dp.events.add({
+                start: args.start,
+                end: args.end,
+                id: DayPilot.guid(),
+                text: name
+            });
+
+        },
+        onEventClicked: function(args) {
+            alert("clicked: " + args.e.id());
+        }
+    });
+    dp.init();
+
+    const app = {
+        elements: {
+            previous: document.getElementById('previous'),
+            next: document.getElementById('next')
+        },
+        init() {
+            this.addEventHandlers();
+            this.loadEventData();
+        },
+        addEventHandlers() {
+            this.elements.previous.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                this.previous();
+            });
+            this.elements.next.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                this.next();
+            });
+        },
+        loadEventData() {
+            const events = [];
+            for (let i = 0; i < 10; i++) {
+                const duration = Math.floor(Math.random() * 1.2);
+                const start = Math.floor(Math.random() * 6);
+                const e = {
+                    start: new DayPilot.Date("2021-03-04T00:00:00").addDays(start),
+                    end: new DayPilot.Date("2021-03-04T12:00:00").addDays(start).addDays(duration),
+                    id: DayPilot.guid(),
+                    text: "Event " + i
+                };
+                events.push(e);
+            }
+            dp.events.list = events;
+            dp.update();
+        },
+        previous() {
+            dp.startDate = dp.startDate.addMonths(-1);
+            dp.update();
+        },
+        next() {
+            dp.startDate = dp.startDate.addMonths(1);
+            dp.update();
+        }
+    };
+    app.init();
+
+
+</script>
+
+<!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

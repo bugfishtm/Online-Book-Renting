@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+	<!--	
+		__________ ____ ___  ___________________.___  _________ ___ ___  
+		\______   \    |   \/  _____/\_   _____/|   |/   _____//   |   \ 
+		 |    |  _/    |   /   \  ___ |    __)  |   |\_____  \/    ~    \
+		 |    |   \    |  /\    \_\  \|     \   |   |/        \    Y    /
+		 |______  /______/  \______  /\___  /   |___/_______  /\___|_  / 
+				\/                 \/     \/                \/       \/  	
+							www.bugfish.eu
+							
+	    Bugfish Fast PHP Page Framework
+		Copyright (C) 2024 Jan Maurice Dahlmanns [Bugfish]
+
+		This program is free software: you can redistribute it and/or modify
+		it under the terms of the GNU General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.
+
+		This program is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+
+		You should have received a copy of the GNU General Public License
+		along with this program.  If not, see <https://www.gnu.org/licenses/>.
+	-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bugfish-jquery-sortselect</title>
+    <script src="./jq.3.6.min.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+<style>
+    html,* { font-family: 'Inter'; box-sizing: border-box; }
+body { background-color: #121212; line-height:1.6; color: white !important;}
+.lead { font-size: 1.5rem; font-weight: 300; }
+.container { margin: 20px auto; max-width: 960px; }
+.selection_title, .selectable_title { font-weight: 600; }
+.btn { padding: 1.25rem; border: 0; border-radius: 3px; background-color: #242424; color: #fff; cursor: pointer; margin: 3px 20px; }
+a { color: orange; }
+</style>
+    <!--multiselect-sortable-->
+    <script src="./jquery.multiselect.sortable.js"></script>
+    <link rel="stylesheet" href="./jquery.multiselect.sortable.js.css">
+    <script>
+        jQuery(function($){
+            $('.multiselectsortable_1').bugfish_sortselect({
+				selectable:{
+					title:'Disabled'
+				},
+				selection :{
+					title:'Selected'
+				},
+				rid: 31
+            });
+            
+            $('.submit_btn').on('click',function(){
+                var a = $('.bugfish_1').val()
+                console.log(a)
+                return false;
+            })
+            
+        })
+		
+        jQuery(function($){
+            $('.multiselectsortable_2').bugfish_sortselect({
+                selectable:{
+					title:'Disabled'
+				},
+				selection :{
+					title:'Selected'
+				},
+				rid: 32
+            });
+            
+            $('.submit_btn').on('click',function(){
+                var a = $('.bugfish_2').val()
+                console.log(a)
+                return false;
+            })
+            
+        })
+    </script>
+</head>
+<body>
+
+<center>
+<a href="https://github.com/bugfishtm/bugfish-jquery-sortselect">Github Page</a> | 
+<a href="https://www.bugfish-github.de">Visit my Documentations</a> | 
+<a href="https://www.bugfish.eu/">Visit my Website</a>
+</center>
+
+
+<div class="container">
+<h1>bugfish-jquery-sortselect</h1>
+<p class="lead">A jQuery multiple select plugin that turns a normal select element into a sortable dual list box, where you can swap options between two side-by-side selection lists. I have taken over this software from another developer! You can use the results without javascript and directly in the form. It is not forcing you to handle the form with javascript.</p>
+
+
+
+	<form action="" method="post">
+		<select name="multiselectsortable_1" class="multiselectsortable_1 bugfish_1" multiple>
+			<option value="7" selected data-deneme="deneme" disabled>Entry 7</option>
+			<option value="6" selected disabled>Entry 6</option>
+			<option value="5" disabled>Entry 5</option>
+			<option value="4" selected>Entry 4</option>
+			<option value="3" selected>Entry 3</option>
+			<option value="2" selected>Entry 2</option>
+			<option value="1" selected>Entry 1</option>
+		</select>
+		<input type="submit" class="submit_btn btn" value="Check the Browser Console after Submit to see result!">
+	</form>
+
+	<form action="" method="post">
+		<select name="multiselectsortable_2" class="multiselectsortable_2 bugfish_2" multiple>
+			<option value="13" selected data-deneme="deneme" disabled>Entry 13</option>
+			<option value="14" selected disabled>Entry 14</option>
+			<option value="12" disabled>Entry 12</option>
+			<option value="11" selected>Entry 11</option>
+			<option value="10" selected>Entry 10</option>
+			<option value="9" selected>Entry 9</option>
+			<option value="8" selected>Entry 8</option>
+		</select>
+		<input type="submit" class="submit_btn btn" value="Check the Browser Console after Submit to see result!">
+	</form>
+
+</div><br clear="left">
+<center>
+Made by Jan-Maurice Dahlmanns / Hasan
+</center><br />
+</body>
+</html>

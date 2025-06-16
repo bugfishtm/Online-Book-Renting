@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Context Menu (Monthly Event Calendar)</title>
+
+    <!-- head -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../helpers/v2/main.css?v=2024.3.543" type="text/css" rel="stylesheet"/>
+    <script src="../js/daypilot-all.min.js?v=2024.3.543"></script>
+
+    <!-- /head -->
+
+</head>
+<body>
+
+<!-- top -->
+<template id="content" data-version="2024.3.543">
+
+    <!-- /top -->
+
+    <div class="note"><b>Note:</b> Right click an event to activate a context menu. Read more about <a href="https://doc.daypilot.org/month/event-context-menu/">event
+        context menu</a> [doc.daypilot.org].
+    </div>
+
+    <div id="dp"></div>
+
+    <script type="text/javascript">
+
+
+        const dp = new DayPilot.Month("dp", {
+            startDate: "2023-03-01",
+            contextMenu: new DayPilot.Menu({
+                items: [
+                    {text: "Edit...", onClick: args => app.editEvent(args.source) },
+                    {text: "Delete", onClick: args => app.deleteEvent(args.source) },
+                    {text: "-"},
+                    {text: "Duplicate", onClick: args => app.duplicateEvent(args.source) },
+                    {text: "Postpone", onClick: args => app.postponeEvent(args.source) }
+                ]
+            }),
+            onTimeRangeSelected: async (args) => {
+                const modal = await DayPilot.Modal.prompt("New event name:", "Event");
+                dp.clearSelection();
+                if (modal.canceled) {
+                    return;
+                }
+                dp.events.add({
+                    start: args.start,
+                    end: args.end,
+                    id: DayPilot.guid(),
+                    text: modal.result
+                });
+            }
+        });
+        dp.init();
+
+        const app = {
+            init() {
+                app.loadEvents();
+            },
+            loadEvents() {
+                const events = [];
+
+                // generate and load events
+                for (var i = 1; i <= 10; i++) {
+                    const duration = Math.floor(Math.random() * 1.2);
+                    const start = Math.floor(Math.random() * 6) - 3; // -3 to 3
+
+                    events.push({
+                        start: new DayPilot.Date("2023-03-04T00:00:00").addDays(start),
+                        end: new DayPilot.Date("2023-03-04T12:00:00").addDays(start).addDays(duration),
+                        id: DayPilot.guid(),
+                        text: "Event " + i
+                    });
+                }
+
+                dp.update({events});
+            },
+            async editEvent(e) {
+                const modal = await DayPilot.Modal.prompt("Edit event name:", e.text());
+                if (modal.canceled) {
+                    return;
+                }
+                e.data.text = modal.result;
+                dp.events.update(e);
+            },
+            deleteEvent(e) {
+                dp.events.remove(e);
+            },
+            duplicateEvent(e) {
+                const newEvent = {
+                    start: e.start(),
+                    end: e.end(),
+                    id: DayPilot.guid(),
+                    text: e.text() + " (copy)"
+                };
+                dp.events.add(newEvent);
+            },
+            postponeEvent(e) {
+                const newStart = e.start().addDays(1);
+                const newEnd = e.end().addDays(1);
+                e.start(newStart);
+                e.end(newEnd);
+                dp.events.update(e);
+            }
+        };
+        app.init();
+
+
+    </script>
+
+    <!-- bottom -->
+</template>
+
+<script src="../helpers/v2/app.js?v=2024.3.543"></script>
+
+<!-- /bottom -->
+
+</body>
+</html>
+

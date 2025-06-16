@@ -1,0 +1,20 @@
+services:
+  obr:
+    build: .
+    image: bugfishtm/obr:latest
+    restart: always
+    volumes:
+      - ssl:/opt/sf_ssl
+      - data:/var/www/html/_data
+      - mysql:/var/lib/mysql
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      sf_db_pass:       "${sf_db_pass}"
+      sf_url:           "${sf_url}"
+      sf_timezone:      "${sf_timezone}"
+volumes:
+  mysql:
+  data:
+  ssl:
